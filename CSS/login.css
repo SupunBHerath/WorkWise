@@ -1,0 +1,111 @@
+
+.logo {
+    width: 130px;
+    cursor: pointer;
+   float: left;
+}
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(../Image/Home/1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.login-container {
+    background-color: #ffffffe2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 2);
+    width: 350px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #13544e;
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+.loginform {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-group button {
+    background-color: #f5f9f5;
+    color: #1ede37;
+   
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.login-container a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bolder;
+}
+.login-container h5 {
+    color: red;
+}
+#loginbtn{
+    background-color: lightgray;
+    border-style: groove;
+
+}
+#loginbtn :hover{
+    background-color:rgb(72, 229, 72) ;
+    border: white;
+    color: rgb(254, 254, 255);
+    border-radius: 6px;
+    border-style: none;
+   
+    transition: 1s;
+
+}
+
+#fp{
+    margin-top: -5px;
+    font-size: smaller;
+    margin-left: -215px;
+}
+#fp a {
+    font-size: small;
+}
+ #fp   :hover{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: red;
+ }

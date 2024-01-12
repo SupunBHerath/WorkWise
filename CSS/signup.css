@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../Image/Home/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.form {
+    background-color: #ffffffe4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 2);
+    width: 100%;
+    text-align: center;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input , select{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+#S1 a{
+    text-decoration: none;
+    color: white;
+}
+
+.name-input {
+    display: flex;
+    gap: 10px;
+}
+
+.form input {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#S1 {
+    width: 100%;
+    border-radius: 20px;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.logo {
+    width: 130px;
+    cursor: pointer;
+    float: left;
+}
+
+#firstName {
+    width: 48%;
+    float: inline-start;
+
+
+}
+
+#lastName {
+    width: 48%;
+    float: inline-end;
+    margin-left: 0px;
+
+}

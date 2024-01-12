@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+}
+.headerbar{
+    margin-top: -30px;
+    padding: 0;
+    height: 50px;
+    background-color: #13544e;
+   
+}
+.headerbar h3{
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+}

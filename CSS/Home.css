@@ -1,0 +1,382 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5bd;
+}
+/* home welcome image*/
+.container {
+    background-color: #333;
+    max-width: 100%;
+    height: 650px;
+  background-color: rgba(255, 255, 255, 0);
+   margin-top: 60px;
+    font-family: sans-serif;
+
+    
+
+}
+
+.container h1 {
+    color: #13544e;
+    padding-top: 0px;
+    padding-left: 10px;
+    font-size: 75px;
+    font-weight: 800;
+  margin-top: -30px;
+}
+
+#workwise {
+    padding-left: 50px;
+    padding-top: 0;
+    margin-top: -40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: inherit;
+}
+
+.signbtn {
+    display: flex;
+    padding: 10px 30px;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    background: #dc0404;
+    font-weight: 1000;
+    font-size: medium;
+    cursor: pointer;
+    margin-left: 190px;
+    margin-top: 60px;
+}
+
+.signbtn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.login{
+    margin-top: 3px;
+    border-style: dotted;
+    border-top-left-radius:20px ;
+    border-bottom-right-radius: 20px;
+    width: 60px;
+    border-style: double;
+   
+}
+
+
+.container h3 {
+    padding-left: 30px;
+    padding-top: 0;
+    margin-top: -20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 33px;
+    font-style: inherit;
+    color: #23396f;
+    font-weight: 800;
+}
+/* flex */
+  .flex-container {
+    margin-top: -50px;
+    display: flex;
+    flex-wrap: wrap; /* code eka respons krna eka  */
+    text-align: center;
+   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+     width: 100%;
+  }
+  
+  .flex-text {
+    background-color: #f1f1f100;
+    padding-top: 100px;
+    flex: 50%;
+    box-sizing: border-box;
+  
+
+  }
+  
+  .flex-image {
+    padding: px;
+    flex: 50%;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border-radius: 60px; */
+    background-image: url(../Image/FT/postw.gif);
+   height: 500px;
+
+  }
+  .flex-image img {
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+  }
+/* home welcome image*/
+/* image bar */
+.imagebar {
+    padding: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../Image/Home/bar.png);
+    background-size: cover;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 8);
+
+}
+
+
+/* image bar */
+/* .square */
+.square-container {
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+
+}
+
+.square {
+    width: 250px;
+    height: max-content;
+    background-color: rgb(233, 220, 220);
+    margin-left: 25px;
+    margin-right: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+}
+
+#squareText {
+    margin-top: -10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    margin-left: 5px;
+    color: #13544e;
+    font-weight: bolder;
+    text-align: left;
+    margin-left: 25px;
+
+}
+#squareTextP {
+    font-size: 20px;
+    
+}
+
+.square img {
+    width: 100%;
+    height: 150px;
+}
+
+.square a {
+    text-decoration: none;
+
+}
+
+.square h3 :hover {
+    color: #13544e;
+    font-size: 20px;
+    transition: .5s;
+}
+
+#Find-more a{
+    text-decoration: solid;
+    color: white;
+
+}
+
+
+/* post your work  */
+
+
+.postWork-box{
+    display: flex;
+    gap: 70px;
+    padding-top: 50px;
+}
+
+.postText{
+    flex: 50%;
+    background-color: #13544e;
+    margin-left: 30px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+.postText h1 {
+    font-size: 100px;
+    margin-left: 130px;
+    color: white;
+
+}
+.postText p {
+    margin-left: 130px;
+    font-size: 20px;
+    line-height: 35px;
+    margin-top: -30px;
+}
+.postText h2 {
+    margin-top: -70px;
+    margin-left: 130px;
+    font-size: 80px;
+}
+.postText  button {
+    background-color: rgb(247, 5, 5);
+    padding: 10px;
+    font-size: large;
+    float: inline-end;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+.postText  button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+.postImage{
+    flex: 50%;
+    background-image: url(../Image/Home/s2.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+
+
+.PostWork {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-position: center;
+    max-width: max-content;
+    max-height: max-content;
+    margin-left: 130px;
+    margin-right: 130px;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.PostWork h1 {
+    color: #13544e;
+    padding-top: 30px;
+    
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.PostWork p,
+ol,
+ul {
+    color: #555;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.PostWork ol,
+ul {
+    margin-left: 60px;
+}
+
+
+
+.PostWork button {
+    background-color: #ee0404;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 10px;
+    width: 290px;
+
+}
+
+.PostWork button a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+}
+
+button:hover {
+    background-color: #45a049;
+
+
+}
+
+/* post your work  */
+
+
+/* footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+}
+
+
+@media (max-width: 1000px) {
+    .flex-text, .flex-image {
+      flex: 100%;
+      height: 380px;
+    }
+    .container h1 {
+        font-size: 55px;
+    }
+    .container h3{
+        font-size: 25px;
+    }
+    .signbtn{
+        margin-left: 150px;
+    }
+#squareText  {
+    padding-top: 250px;
+    font-size: 50px;
+}
+#squareText a {
+    font-size: 10px;
+}
+#squareTextp{
+    font-size: 10px;
+}
+.square img {
+    width: 100%;
+    height: 80px;
+}
+.square h3{
+    font-size: 10px;
+}
+.square h3 :hover {
+    color: #13544e;
+    font-size: 12px;
+    transition: .5s;
+}
+.postText h1{
+    font-size: 50px;
+    margin-left: 20px;
+}
+.postText h2 {
+    font-size: 40px;
+    margin-left: 20px;
+    padding-top: 30px;
+}
+.postText p {
+    margin-left: 20px;
+    
+}
+.postWork-box{
+    height: 450px;
+}
+.postImage{
+    height: 450px;
+
+}
+  }
