@@ -37,7 +37,9 @@
 .navbar a.active {
     color: #04AA6D;
     text-underline-offset: 10px;
+    text-decoration: underline;
 }
+
 
 .navbar .icon {
     display: none;

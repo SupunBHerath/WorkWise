@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,9 @@
 
         </div>
     </header>
-    <?php include_once("navbar.php")?>
+    <?php $active1 = "active"; ?>
+
+    <?php include_once("navbar.php") ?>
 
     <div class="container">
         <div class="flex-container">
@@ -99,7 +102,7 @@
             <p>Work with the largest network of independent <br>
                 professionals and get things done—from <br>
                 quick turnarounds to big transformations.</p>
-            <button type="submit"><a href="../HTML/Login.html">Post Your Work</a></button>
+            <button type="submit"><a href="#">Post Your Work</a></button>
 
         </div>
         <div class="postImage">

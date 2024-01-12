@@ -1,4 +1,4 @@
-<?php include("../conn.php"); ?>
+<?php include("conn.php"); ?>
 <?php $active2 = "active"; ?>
 
 <?php
@@ -59,21 +59,21 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/user.css">
+    <link rel="stylesheet" href="../CSS/user.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <link rel="stylesheet" href="../../CSS/header.css">
+        <link rel="stylesheet" href="../CSS/header.css">
         <div class="headerbar">
             <h3>The #1 Site for Remote Jobs</h3>
         </div>
     </header>
 
-    <?php include_once("login_navbar.php"); ?>
-    <form action="user.php" method="get">
+    <?php include_once("navbar.php"); ?>
+    <form action="find_job.php" method="get">
         <div class="searchbar">
             <input type="search" name="search" placeholder="<?php if (isset($_GET["search"])) {
                 echo $_GET["search"];
@@ -131,14 +131,7 @@ $result = mysqli_query($conn, $sql);
                                     <?php echo $row['exitDay']; ?>
                                 </span></p>
                         </div>
-                        <center>
-                            <form action="user.php" method="get">
-                                <button class="apply-btn" type="submit" name="apply">
-                                    <input type="hidden" name="jobId" value="<?php echo $row['jobId']; ?>">
-                                    More Details <i class="fas fa-info-circle"></i>
-                                </button>
-                            </form>
-                        </center>
+                     
                     </div>
 
                     <?php

@@ -35,7 +35,13 @@ button{
 
 }
 select{
-    border-radius: 10px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-style: solid;
+    border-right-style: none;
+    margin-left: -100px;
+    position: sticky;
     
 }
 button i {
@@ -124,3 +130,33 @@ p {
 }
 
 
+@media screen and (max-width: 900px) {
+    .job_row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+}
+@media screen and (max-width: 800px) {
+    .job_row {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .job_listings {
+        max-width: 500px;
+        margin: 20px auto;
+       
+    }
+    
+}
+@media screen and (max-width: 650px) {
+    
+    .job_listings {
+        max-width: 300px;
+        margin: 20px auto;
+       
+    }
+    
+}

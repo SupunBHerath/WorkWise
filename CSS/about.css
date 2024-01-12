@@ -1,0 +1,51 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+.disc {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+}
+
+
+
+.logo {
+    width: 130px;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 30px;
+
+}
+
+
+@media screen and (max-width: 900px) {
+   
+    .disc {
+        max-width: 600px;
+      
+    }
+}
+@media screen and (max-width: 700px) {
+   
+    .disc {
+        max-width: 400px;
+      
+    }
+}

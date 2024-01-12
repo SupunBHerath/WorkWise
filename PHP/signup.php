@@ -25,9 +25,9 @@ if (isset($_POST["submit"])) {
                 $stmt = $conn->prepare($sql);
                 $stmt->bind_param("ssssss", $fName, $lName, $email, $hashpassword, $qusation, $answer);
                 $stmt->execute();
+                header("location:login.php");
                 $stmt->close();
                 
-                header("login.php");
             }
         }
     }
@@ -52,8 +52,8 @@ if (isset($_POST["submit"])) {
 
     <form action="signup.php" method="post">
         <div class="form">
-            <a href="../HTML/Home.html"> <img src="../Image/logo/logo1.png" alt="logo" class="logo"></a>
-            <a href="../HTML/Home.html"><img src="../Image/logo/X.png" alt="x"
+            <a href="index.php"> <img src="../Image/logo/logo1.png" alt="logo" class="logo"></a>
+            <a href="index.php"><img src="../Image/logo/X.png" alt="x"
                     style="float: inline-end; width: 20px; height: 20px;"></a>
 
             <br><br><br>

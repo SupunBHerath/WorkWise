@@ -37,6 +37,7 @@
 .navbar a.active {
    color: #04AA6D;
   text-underline-offset: 10px;
+  text-decoration: underline;
 }
 
 .navbar .icon {
@@ -47,7 +48,7 @@
     float: inline-end;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .navbar a:not(:first-child) {
         display: none;
     }
@@ -61,7 +62,7 @@
 }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .navbar.responsive {
         position: relative;
     }
