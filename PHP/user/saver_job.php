@@ -3,51 +3,53 @@
 
 <?php
 $note = "";
-if (isset($_GET["search"]) || isset($_GET["filter"])) {
-    $search1 = $_GET["search"];
-    $filter = $_GET["filter"];
-    $search = mysqli_real_escape_string($conn, $search1);
+// if (isset($_GET["search"]) || isset($_GET["filter"])) {
+//     $search1 = $_GET["search"];
+//     $filter = $_GET["filter"];
+//     $search = mysqli_real_escape_string($conn, $search1);
 
-    if (!empty($search)) {
-        if ($filter == "All Type") {
-            $sql = "SELECT * FROM jobtable WHERE (title LIKE '%$search%' OR company LIKE '%$search%' OR location LIKE '%$search%' OR price LIKE '%$search%' OR exitDay LIKE '%$search%')";
-            $result = mysqli_query($conn, $sql);
-            if ($result == false) {
-                // echo '<script> alert("Data not found.");</script>';
-
-
-            }
-        } else if ($filter == "Full Time" || $filter == "Part Time") {
-            $sql = "SELECT * FROM jobtable WHERE (title LIKE '%$search%' OR company LIKE '%$search%' OR location LIKE '%$search%' OR price LIKE '%$search%' OR exitDay LIKE '%$search%') AND jobType = '$filter'";
-            $result = mysqli_query($conn, $sql);
-            if ($result == false) {
+//     if (!empty($search)) {
+//         if ($filter == "All Type") {
+//             $sql = "SELECT * FROM jobtable WHERE (title LIKE '%$search%' OR company LIKE '%$search%' OR location LIKE '%$search%' OR price LIKE '%$search%' OR exitDay LIKE '%$search%')";
+//             $result = mysqli_query($conn, $sql);
+//             if ($result == false) {
+//                 // echo '<script> alert("Data not found.");</script>';
 
 
-            }
+//             }
+//         } else if ($filter == "Full Time" || $filter == "Part Time") {
+//             $sql = "SELECT * FROM jobtable WHERE (title LIKE '%$search%' OR company LIKE '%$search%' OR location LIKE '%$search%' OR price LIKE '%$search%' OR exitDay LIKE '%$search%') AND jobType = '$filter'";
+//             $result = mysqli_query($conn, $sql);
+//             if ($result == false) {
 
-        } else {
-            // echo '<script> alert("Data not found.");</script>';
+
+//             }
+
+//         } else {
+//             // echo '<script> alert("Data not found.");</script>';
 
 
-        }
-    } else {
-        if ($filter == "Full Time" || $filter == "Part Time") {
-            $sql = "SELECT * FROM jobtable WHERE jobType = '$filter'";
-            $result = mysqli_query($conn, $sql);
-            if ($result == false) {
-                // echo '<script> alert("Data not found.");</script>';
-                $note = "Data not found.";
-            }
+//         }
+//     } else {
+//         if ($filter == "Full Time" || $filter == "Part Time") {
+//             $sql = "SELECT * FROM jobtable WHERE jobType = '$filter'";
+//             $result = mysqli_query($conn, $sql);
+//             if ($result == false) {
+//                 // echo '<script> alert("Data not found.");</script>';
+//                 $note = "Data not found.";
+//             }
 
-        } else {
-            $sql = "SELECT * FROM jobtable ";
+//         } else {
+//             $sql = "SELECT * FROM jobtable ";
 
-        }
+//         }
 
-    }
-} else {
-    $sql = "SELECT * FROM jobtable ";
-}
+//     }
+// } else {
+//     $sql = "SELECT * FROM jobtable ";
+// }
+
+$sql = "SELECT joblist.jobid FROM joblist INNER JOIN savejob ON joblist.jobid = savejob.jobid WHERE savejob.userid = 'your_user_id'; ";
 
 $result = mysqli_query($conn, $sql);
 
@@ -73,7 +75,7 @@ $result = mysqli_query($conn, $sql);
     </header>
 
     <?php include_once("login_navbar.php"); ?>
-    <form action="user.php" method="get">
+    <form action="save_job.php" method="get">
         <div class="searchbar">
             <input type="search" name="search" placeholder="<?php if (isset($_GET["search"])) {
                 echo $_GET["search"];
