@@ -1,5 +1,7 @@
-<?php include("../conn.php"); ?>
-<?php $active2 = "active"; ?>
+<?php include("../conn.php");
+session_start();
+?>
+<?php $active4 = "active"; ?>
 
 <?php
 $note = "";
@@ -48,8 +50,16 @@ $note = "";
 // } else {
 //     $sql = "SELECT * FROM jobtable ";
 // }
+$userid = $_SESSION['id'];
+// $sql = "SELECT jobtable.jobId FROM jobtable INNER JOIN bmjob ON jobtable.jobId = bmjob.jobId WHERE bmjob.userId = '$userid'; ";
+// $sql= "SELECT bmjob.jobId FROM bmjob INNER JOIN jobtable ON bmjob.jobId = jobtable.jobId WHERE bmjob.userId = '$userid'; ";
+$sql = "SELECT bm.id, job.*
+        FROM bmjob bm
+        JOIN users t1 ON bm.userId = t1.userId
+        JOIN jobtable job ON bm.jobId = job.jobId
+        WHERE t1.userId = '$userid'";
 
-$sql = "SELECT joblist.jobid FROM joblist INNER JOIN savejob ON joblist.jobid = savejob.jobid WHERE savejob.userid = 'your_user_id'; ";
+
 
 $result = mysqli_query($conn, $sql);
 

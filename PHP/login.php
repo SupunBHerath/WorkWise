@@ -1,6 +1,6 @@
 <?php include("conn.php") ?>
 <?php
-session_destroy();
+// session_destroy();
 
 if (isset($_POST["submit"])) {
     $email = $_POST["email"];
@@ -19,12 +19,14 @@ if (isset($_POST["submit"])) {
             if (password_verify($password, $row["password"])) {
                 if ($row["role"] == 'user') {
                     session_start();
+                    $_SESSION['id'] = $row['userid'];
                     $_SESSION['user'] = $row['fName'];
                     $_SESSION['email'] = $row['email'];
                     header('location:user/user.php');
                     exit();
                 } else {
                     session_start();
+                    $_SESSION['id'] = $row['userid'];
                     $_SESSION['user'] = $row['fName'];
                     $_SESSION['email'] = $row['email'];
                     header('location:admin/admin.php');

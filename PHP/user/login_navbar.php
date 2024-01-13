@@ -6,7 +6,7 @@
     <a class="<?php echo $active1?>" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
     <a class="<?php echo $active2?>" href="user.php" ><i class="fa fa-fw fa-search"></i> Search Job</a>
     <a class="<?php echo $active3?>" href="#"><i class="fa fa-group"></i> Find Freelancers</a>
-    <a class="<?php echo $active4?>" href="save.php"><i class="	fa fa-bookmark"></i> Save Job</a>
+    <a class="<?php echo $active4?>" href="save_job.php"><i class="	fa fa-bookmark"></i> Save Job</a>
     <a class="<?php echo $active5?>" href="../index.php" id="login"><i class="fa fa-sign-out "></i> Logo Out</a>
     <a class="<?php echo $active6?>" href="#" id="profile"><div class="pimge" style="background-image: url(../../Image/Home/w2.jpg);"></div> </a>
 
