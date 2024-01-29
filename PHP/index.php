@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/Home.css">
     <title>Document</title>
+    <style>
+        .square-container {
+            justify-content: center;
+            margin: 20px auto;
+         
+
+        }
+
+        .row {
+        
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* gap: 20px; */
+        }
+    </style>
 </head>
 
 <body>
@@ -47,51 +62,51 @@
     <!-- job categories  -->
     <H1 id="squareText">Popular Job categories<a href="" id="squareTextP"> Find More Job</a> </H1>
     <div class="square-container">
-        <div class="square">
-            <img src="../Image/FT/GD.png" alt="">
-            <h3><a href="#">Graphic Design</a></h3>
+        <div class="row">
+            <div class="square">
+                <img src="../Image/FT/GD.png" alt="">
+                <h3><a href="#">Graphic Design</a></h3>
+            </div>
+            <div class="square">
+                <img src="../Image/Home/4.gif" alt="">
+                <h3><a href="#">Web Development</a></h3>
+            </div>
+            <div class="square">
+                <img src="../Image/FT/EC.gif" alt="">
+                <h3> <a href="#">Ecommerce Development</a></h3>
+            </div>
+            <div class="square">
+                <img src="../Image/FT/AI.gif" alt="">
+                <h3><a href="#">AI Service</a></h3>
+            </div>
+            <div class="square">
+                <img src="../Image/FT/GD.png" alt="">
+                <h3><a href="#">Game Developers</a></h3>
+            </div>
+            <div class="square">
+                <img src="../Image/Home/4.gif" alt="">
+                <h3><a href="#">Java Developers</a></h3>
+            </div>
+            <div class="square">
+                <img src="../Image/FT/SD2.jpg" alt="">
+                <h3> <a href="#">Mobile App Developers</a></h3>
+            </div>
+            <div class="square">
+                <img src="../Image/FT/GD.png" alt="">
+                <h3><a href="#">CMS Developers</a></h3>
+            </div>
+            <div class="square">
+                <img src="../Image/FT/SD2.jpg" alt="">
+                <h3> <a href="#">Mobile App Developers</a></h3>
+            </div>
+            <div class="square">
+                <img src="../Image/FT/GD.png" alt="">
+                <h3><a href="#">CMS Developers</a></h3>
+            </div>
         </div>
-        <div class="square">
-            <img src="../Image/Home/4.gif" alt="">
-            <h3><a href="#">Web Development</a></h3>
-        </div>
-        <div class="square">
-            <img src="../Image/FT/EC.gif" alt="">
-            <h3> <a href="#">Ecommerce Development</a></h3>
-        </div>
-        <div class="square">
-            <img src="../Image/FT/AI.gif" alt="">
-            <h3><a href="#">AI Service</a></h3>
-        </div>
-        <div class="square">
-            <img src="../Image/FT/DA.gif" alt="">
-            <h3><a href="#">Data Analys</a></h3>
-        </div>
-
-    </div><br><br><br>
-    <div class="square-container">
-        <div class="square">
-            <img src="../Image/FT/GD.png" alt="">
-            <h3><a href="#">Game Developers</a></h3>
-        </div>
-        <div class="square">
-            <img src="../Image/Home/4.gif" alt="">
-            <h3><a href="#">Java Developers</a></h3>
-        </div>
-        <div class="square">
-            <img src="../Image/FT/SD2.jpg" alt="">
-            <h3> <a href="#">Mobile App Developers</a></h3>
-        </div>
-        <div class="square">
-            <img src="../Image/FT/GD.png" alt="">
-            <h3><a href="#">CMS Developers</a></h3>
-        </div>
-        <div class="square">
-            <img src="../Image/FT/GD.png" alt="">
-            <h3><a href="#">API Developers</a></h3>
-        </div>
-
     </div>
+
+
     <br><br><br>
     <!-- /* post your work  */ -->
 

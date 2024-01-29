@@ -1,4 +1,6 @@
 <?php include("../conn.php"); ?>
+<?php session_start();?>
+
 <?php $active2 = "active"; ?>
 
 <?php
@@ -65,12 +67,15 @@ $result = mysqli_query($conn, $sql);
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <link rel="stylesheet" href="../../CSS/header.css">
         <div class="headerbar">
             <h3>The #1 Site for Remote Jobs</h3>
         </div>
-    </header>
+    </header> -->
+
+    <?php include_once("login_header.php"); ?>
+
 
     <?php include_once("login_navbar.php"); ?>
     <form action="user.php" method="get">

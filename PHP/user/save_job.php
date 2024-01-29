@@ -2,7 +2,21 @@
 session_start();
 ?>
 <?php $active4 = "active"; ?>
+<?php 
+if(isset($_GET['remove'])){
+    $jobid=$_GET['id'];
+    $sql= "DELETE FROM bmjob WHERE `bmjob`.`id` = $jobid";
+    $result = mysqli_query($conn,$sql);
+    if($result){
+            echo '<script> alert("Delete successful.");</script>';
+            header('location:save_job.php');
 
+
+        
+    }
+
+}
+?>
 <?php
 $note = "";
 // if (isset($_GET["search"]) || isset($_GET["filter"])) {
@@ -71,7 +85,7 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/user.css">
+    <link rel="stylesheet" href="../../CSS/save_job.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
 </head>
@@ -116,8 +130,11 @@ $result = mysqli_query($conn, $sql);
                 $newID = 1;
                 while ($row = mysqli_fetch_assoc($result)) {
                     ?>
-
+                     <form action="save_job.php" method="get">
                     <div class="job">
+                     <button id="remove" type="submit" name="remove"><i class="fa fa-remove"></i></button>
+                     <input type="hidden" name="id" value ="<?php echo $row['id']?>">
+
                         <h2>
                             <?php echo $row["title"]; ?>
                         </h2>
@@ -152,6 +169,7 @@ $result = mysqli_query($conn, $sql);
                             </form>
                         </center>
                     </div>
+                    </form>
 
                     <?php
                     $newID++;

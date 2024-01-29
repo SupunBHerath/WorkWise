@@ -38,7 +38,7 @@ button {
 }
 
 .job:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 h2 {
@@ -131,7 +131,15 @@ table td {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }
+#back i{
+    font-size: 30px;
+}
+#back{
 
+    float: inline-end;
+    padding: 5px auto;
+
+}
 
 @media screen and (max-width: 900px) {
     .job_row {

@@ -20,14 +20,17 @@ if (isset($_POST["submit"])) {
                 if ($row["role"] == 'user') {
                     session_start();
                     $_SESSION['id'] = $row['userid'];
-                    $_SESSION['user'] = $row['fName'];
+                    $_SESSION['fName'] = $row['fName'];
+                    $_SESSION['lName'] = $row['lName'];
                     $_SESSION['email'] = $row['email'];
+                    $_SESSION['image'] = $row['image'];
                     header('location:user/user.php');
                     exit();
                 } else {
                     session_start();
                     $_SESSION['id'] = $row['userid'];
-                    $_SESSION['user'] = $row['fName'];
+                    $_SESSION['fName'] = $row['fName'];
+                    $_SESSION['lName'] = $row['lName'];
                     $_SESSION['email'] = $row['email'];
                     header('location:admin/admin.php');
                     exit();
