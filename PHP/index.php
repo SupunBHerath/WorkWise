@@ -34,6 +34,8 @@
     <?php $active1 = "active"; ?>
 
     <?php include_once("navbar.php") ?>
+    <?php include_once("navbar.php") ?>
+    
 
     <div class="container">
         <div class="flex-container">
