@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
 }
 
 .searchbar{
@@ -20,14 +20,14 @@ input , button,select {
     
     
 }
-input{
+.searchbar input{
     width: 50%;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-right-style: none;
 
 }
-button{
+.searchbar button{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border-left-style: none;
@@ -51,19 +51,21 @@ button i {
 #phpmg{
    
     text-align: center;
+    margin-bottom: 0;
 }
 
 .job_listings {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 1800px;
+    max-width: 1100px;
     margin: 20px auto;
    
 }
 
 .job_row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    row-gap: 70px;
 }
 
 .job {
@@ -97,7 +99,7 @@ p {
 }
 
 .job_details{
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     padding: 10px;
     border-radius: 8px;
 }
@@ -127,6 +129,20 @@ p {
 
 .apply-btn:hover {
     background-color: #45a049;
+}
+#remove i {
+    font-size:24px;
+    color:red;
+
+}
+#remove{
+    float: inline-end;
+    margin: -5px 0;
+    padding: 0;
+    padding-left: 20px;
+    border-style: none;
+    background-color: #f4f4f407;
+    cursor: pointer;
 }
 
 

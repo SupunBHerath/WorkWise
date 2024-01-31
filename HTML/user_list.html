@@ -4,86 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/user_list.css">
     <title>Document</title>
     <style>
-body {
-    background-color: rgba(175, 172, 172, 0.444);
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-}
 
-table {
-    border-collapse: collapse;
-    width: 70%;
-    margin: auto;
-    border: 2px solid #393838;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-th,
-td {
-    text-align: left;
-    padding: 12px;
-    border: 2px solid #393838;
-}
-
-thead {
-    background-color: #393838;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-     
-}
-thead th {
-    text-align: center;
-    border: 2px solid #f6f2f2;
-
-}
-#idNumber{
-    text-align: center;
-}
-tbody {
-    background-color: #fff;
-}
-
-tr:nth-child(even) {
-    background-color: #a8a4a4c8;
-}
-
-a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-.btn{
-    text-align: center;
-    display: block;
-}
-.btn li {
-    display: inline-block;
-    margin: 10px;
-}
-.btn li button{
-    padding: 5px;
-    width: 80px;
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 15px;
-    transition: 0.5s;
-    outline: none;
-}
     </style>
 </head>
 
@@ -110,7 +34,9 @@ a:hover {
                     supun b hereath
         
                 </td>
-                <td><a href="#">Edit</a></td>
+                <td id="btntd">
+                    <button type="submit">Edit</button>
+                    <button id="delbtn" type="submit">Deleted</button></td>
             </tr>
             <tr>
                 <td>1</td>

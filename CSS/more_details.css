@@ -119,8 +119,8 @@ p {
 
 #bookmark :hover {
     color: #45a049;
-    transform: scale(1.1);
-    cursor: pointer;
+    /* transform: scale(1.0);
+    cursor: pointer; */
     
 
 
@@ -135,8 +135,7 @@ table td {
     font-size: 30px;
 }
 #back{
-
-    float: inline-end;
+    float: inline-start;
     padding: 5px auto;
 
 }

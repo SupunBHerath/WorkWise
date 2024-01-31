@@ -5,6 +5,7 @@
 
 <?php
 $note = "";
+$ctg=$_GET["ctg"];
 if (isset($_GET["search"]) || isset($_GET["filter"])) {
     $search1 = $_GET["search"];
     $filter = $_GET["filter"];
@@ -12,15 +13,14 @@ if (isset($_GET["search"]) || isset($_GET["filter"])) {
 
     if (!empty($search)) {
         if ($filter == "All Type") {
-            $sql = "SELECT * FROM jobtable WHERE (title LIKE '%$search%' OR company LIKE '%$search%' OR location LIKE '%$search%' OR price LIKE '%$search%' OR exitDay LIKE '%$search%')";
+            $sql = "SELECT * FROM jobtable WHERE category='$ctg' AND (title LIKE '%$search%' OR company LIKE '%$search%' OR location LIKE '%$search%' OR price LIKE '%$search%' OR exitDay LIKE '%$search%')";
             $result = mysqli_query($conn, $sql);
             if ($result == false) {
                 // echo '<script> alert("Data not found.");</script>';
 
-
             }
         } else if ($filter == "Full Time" || $filter == "Part Time") {
-            $sql = "SELECT * FROM jobtable WHERE (title LIKE '%$search%' OR company LIKE '%$search%' OR location LIKE '%$search%' OR price LIKE '%$search%' OR exitDay LIKE '%$search%') AND jobType = '$filter'";
+            $sql = "SELECT * FROM jobtable WHERE category='$ctg' AND (title LIKE '%$search%' OR company LIKE '%$search%' OR location LIKE '%$search%' OR price LIKE '%$search%' OR exitDay LIKE '%$search%') AND jobType = '$filter'";
             $result = mysqli_query($conn, $sql);
             if ($result == false) {
 
@@ -30,11 +30,10 @@ if (isset($_GET["search"]) || isset($_GET["filter"])) {
         } else {
             // echo '<script> alert("Data not found.");</script>';
 
-
         }
     } else {
         if ($filter == "Full Time" || $filter == "Part Time") {
-            $sql = "SELECT * FROM jobtable WHERE jobType = '$filter'";
+            $sql = "SELECT * FROM jobtable WHERE category='$ctg' AND jobType = '$filter'";
             $result = mysqli_query($conn, $sql);
             if ($result == false) {
                 // echo '<script> alert("Data not found.");</script>';
@@ -42,13 +41,13 @@ if (isset($_GET["search"]) || isset($_GET["filter"])) {
             }
 
         } else {
-            $sql = "SELECT * FROM jobtable ";
+            $sql = "SELECT * FROM jobtable WHERE category='$ctg' ";
 
         }
 
     }
 } else {
-    $sql = "SELECT * FROM jobtable ";
+    $sql = "SELECT * FROM jobtable WHERE category='$ctg'";
 }
 
 $result = mysqli_query($conn, $sql);
@@ -64,6 +63,44 @@ $result = mysqli_query($conn, $sql);
     <link rel="stylesheet" href="../../CSS/user.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
+<style>
+#seardiv{
+   background-image: url(../../Image/Home/ctg2.jpg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: none;
+   
+    width: 90%;
+    height: 180px;
+    margin: 10px auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    
+}
+.searchbar2{
+    margin-top: 30px;
+}
+#ctg_name{
+    color: white;
+    font-weight: 1500;
+    color: white;
+    font-size: 50px;
+    margin: 0;
+}
+#ctg_ds{
+    font-size: 30px;
+    font-style: italic;
+    color: white;
+    font-weight: 800;
+    margin: 10px 0 0 0 ;
+    /* margin-bottom: 0; */
+}
+#search_icon{
+    margin-left: -4px;
+}
+</style>
+
+
 </head>
 
 <body>
@@ -80,29 +117,70 @@ $result = mysqli_query($conn, $sql);
     <?php include_once("login_navbar.php"); ?>
     <?php include_once("login_ctg_bar.php"); ?>
 
-    <form action="user.php" method="get">
-        <div class="searchbar">
-            <input type="search" name="search" placeholder="<?php if (isset($_GET["search"])) {
+    <form action="login_job_category.php" method="get">
+        <div class="searchbar" id="seardiv">
+            <?php 
+            $ctg=$_GET['ctg'];
+            if($ctg=='Graphics'){
+                $c1='Graphics & Design';
+                $c2='Designs to make you stand out';
+            } elseif($ctg=='Programming'){
+                $c1='Programming & Tech';
+                $c2='You think it. A programmer develops it';
+            }
+            else if($ctg=='Digital'){
+                $c1='Digital Marketing';
+                $c2='Build your brand. Grow your business.';
+            }
+            elseif($ctg=='Video'){
+                $c1='Video & Animation';
+                $c2='Bring your story to life with creative videos.';
+            }elseif($ctg=='Writing'){
+                $c1='Writing & Translation';
+                $c2='Get your words across—in any language.';
+            }
+            elseif($ctg=='Music'){
+                $c1='Music & Audio';
+                $c2='Do not miss a beat. Bring your sound to life.';
+            }
+            elseif($ctg=='Business'){
+                $c1='Business';
+                $c2='Business to make you stand out';
+            }
+            elseif($ctg=='AI'){
+                $c1='AI Services';
+                $c2='AI to make you stand out';
+            }else{
+                $c1='New';
+                $c2='New to make you stand out';
+            } ?>
+
+            <h1 id="ctg_name"><?php echo $c1;?></h1>
+            <h3 id="ctg_ds"><?php echo $c2;?></h3>
+            
+            <input class="searchbar2"  type="search" name="search" placeholder="<?php if (isset($_GET["search"])) {
                 echo $_GET["search"];
             } else {
                 echo "Search";
             } ?>">
 
-            <select name="filter" id="">
+            <select class="searchbar2" name="filter" id="">
                 <option value="All Type">Job Type</option>
                 <option value="Full Time">Full Time</option>
                 <option value="Part Time">Part Time</option>
             </select>
-            <button><i class="fa fa-fw fa-search"></i></button>
+            <button class="searchbar2" id="search_icon" ><i class="fa fa-fw fa-search"></i></button>
         </div>
+        <input type="hidden" name="ctg" value="<?php echo $ctg?>">
+
     </form>
-    <h3 id="phpmg">
+    <!-- <h3 id="phpmg">
         <?php
-        if (isset($_GET["filter"])) {
-            echo "Job Type: " . $_GET['filter'];
-        }
+        // if (isset($_GET["filter"])) {
+        //     echo "Job Type: " . $_GET['filter'];
+        // }
         ?>
-    </h3>
+    </h3> -->
 
     <div class="job_listings">
         <div class="job_row">

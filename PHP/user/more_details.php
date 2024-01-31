@@ -76,7 +76,7 @@ if (isset($_GET["apply"])) {
     <div class="job_listings">
         <div class="job_row">
             <div class="job">
-                <a id="back" href="http:user.php"><i class="fa fa-chevron-left" style="font-size:20px ;"></i></a>
+                <a id="back" href="http:user.php" style="float: inline-start;"><i class="fa fa-chevron-left" style="font-size:20px ; "></i></a>
                 <form action="more_details.php" method="get">
                     <button id="bookmark" type="submit" name="bookmark"><i class="fa fa-bookmark"
                             style="color: <?php echo $buttonColor; ?>;"></i></button>
@@ -141,7 +141,7 @@ if (isset($_GET["apply"])) {
                 </div>
 
                 <center>
-                    <form action="apply.php" method="get">
+                    <form action="Job Application Form.php" method="get">
                         <button class="apply-btn" type="submit" name="apply">
                             <input type="hidden" name="jobId" value="<?php echo $row['jobId']; ?>">
                             Apply Now <i class="fas fa-info-circle"></i>

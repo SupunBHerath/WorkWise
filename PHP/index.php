@@ -34,7 +34,7 @@
     <?php $active1 = "active"; ?>
 
     <?php include_once("navbar.php") ?>
-    <?php include_once("navbar.php") ?>
+   
     
 
     <div class="container">

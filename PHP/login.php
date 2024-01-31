@@ -24,6 +24,7 @@ if (isset($_POST["submit"])) {
                     $_SESSION['lName'] = $row['lName'];
                     $_SESSION['email'] = $row['email'];
                     $_SESSION['image'] = $row['image'];
+                    $_SESSION['role'] = $row['role'];
                     header('location:user/user.php');
                     exit();
                 } else {
@@ -32,7 +33,10 @@ if (isset($_POST["submit"])) {
                     $_SESSION['fName'] = $row['fName'];
                     $_SESSION['lName'] = $row['lName'];
                     $_SESSION['email'] = $row['email'];
-                    header('location:admin/admin.php');
+                    $_SESSION['image'] = $row['image'];
+                    $_SESSION['role'] = $row['role'];
+
+                    header('location:admin/admin_dashbord.php');
                     exit();
                 }
             } else {

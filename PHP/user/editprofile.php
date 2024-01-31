@@ -42,7 +42,7 @@ session_start();
                 $sql = "UPDATE `users` SET password = '$hashpassword' WHERE `users`.`userid` = $id";
                 $result = mysqli_real_query($conn, $sql);
             } else {
-                echo "Passwords do not match";
+            echo '<script> alert("Passwords do not match");</script>';
             }
         }
 
@@ -55,9 +55,23 @@ session_start();
        $_SESSION['lName']= $row['lName'];
        $_SESSION['email']= $row['email'];  
        $_SESSION['image'] = $row['image'];
+       echo '<script> alert("successful");</script>';
+
+       if($_SESSION['role'] =="admin"){
+        header('location:../admin/admin_profile.php');
+       } else {
         header("location:profile.php");
+
+       }
     }else{
-        echo "error";
+        echo '<script> alert("Error ");</script>';
+    
+        if($_SESSION['role'] =="admin"){
+            header('location:admin/admin_profile.php');
+           } else {
+            header("location:profile.php");
+    
+           }
     }
    }
  
@@ -86,7 +100,13 @@ session_start();
         </div>
     </header>
 
-    <?php include_once("login_navbar.php") ?>
+    <?php 
+    if($_SESSION['role'] =="admin"){
+        include_once("../admin/admin_navbar.php") ;
+       } else {
+        include_once("login_navbar.php") ;
+       }
+    ?>
 
 
     <body>

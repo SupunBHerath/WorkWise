@@ -73,6 +73,7 @@ $result = mysqli_query($conn, $sql);
     </header>
 
     <?php include_once("navbar.php"); ?>
+    <?php include_once("ctg_bar.php"); ?>
     <form action="find_job.php" method="get">
         <div class="searchbar">
             <input type="search" name="search" placeholder="<?php if (isset($_GET["search"])) {

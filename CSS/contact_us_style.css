@@ -1,0 +1,10 @@
+.maindiv{
+    display: flex;
+
+}
+.image{
+    flex:20%;
+}
+.formdiv{
+    flex: 80%;
+}

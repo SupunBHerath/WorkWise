@@ -65,8 +65,7 @@ $note = "";
 //     $sql = "SELECT * FROM jobtable ";
 // }
 $userid = $_SESSION['id'];
-// $sql = "SELECT jobtable.jobId FROM jobtable INNER JOIN bmjob ON jobtable.jobId = bmjob.jobId WHERE bmjob.userId = '$userid'; ";
-// $sql= "SELECT bmjob.jobId FROM bmjob INNER JOIN jobtable ON bmjob.jobId = jobtable.jobId WHERE bmjob.userId = '$userid'; ";
+
 $sql = "SELECT bm.id, job.*
         FROM bmjob bm
         JOIN users t1 ON bm.userId = t1.userId

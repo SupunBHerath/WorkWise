@@ -1,8 +1,19 @@
-<?php include("../conn.php"); ?>
-<?php session_start();?>
+<?php include("../conn.php");
+session_start();
+?>
+<?php $active4 = "active"; ?>
+<?php 
+if(isset($_GET['remove'])){
+    $jobid=$_GET['id'];
+    $sql= "DELETE FROM jobtable WHERE `jobtable`.`jobId` = $jobid";
+    $result = mysqli_query($conn,$sql);
+    if($result){
+            echo '<script> alert("Delete successful.");</script>';
+            header('location:approved_job.php');
+    }
 
-<?php $active2 = "active"; ?>
-
+}
+?>
 <?php
 $note = "";
 if (isset($_GET["search"]) || isset($_GET["filter"])) {
@@ -16,22 +27,14 @@ if (isset($_GET["search"]) || isset($_GET["filter"])) {
             $result = mysqli_query($conn, $sql);
             if ($result == false) {
                 // echo '<script> alert("Data not found.");</script>';
-
-
             }
         } else if ($filter == "Full Time" || $filter == "Part Time") {
             $sql = "SELECT * FROM jobtable WHERE (title LIKE '%$search%' OR company LIKE '%$search%' OR location LIKE '%$search%' OR price LIKE '%$search%' OR exitDay LIKE '%$search%') AND jobType = '$filter'";
             $result = mysqli_query($conn, $sql);
             if ($result == false) {
 
-
             }
-
-        } else {
-            // echo '<script> alert("Data not found.");</script>';
-
-
-        }
+        } 
     } else {
         if ($filter == "Full Time" || $filter == "Part Time") {
             $sql = "SELECT * FROM jobtable WHERE jobType = '$filter'";
@@ -43,13 +46,12 @@ if (isset($_GET["search"]) || isset($_GET["filter"])) {
 
         } else {
             $sql = "SELECT * FROM jobtable ";
-
         }
-
     }
 } else {
     $sql = "SELECT * FROM jobtable ";
 }
+
 
 $result = mysqli_query($conn, $sql);
 
@@ -61,26 +63,21 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/user.css">
+    <link rel="stylesheet" href="../../CSS/save_job.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
 </head>
 
 <body>
-    <!-- <header>
+    <header>
         <link rel="stylesheet" href="../../CSS/header.css">
         <div class="headerbar">
             <h3>The #1 Site for Remote Jobs</h3>
         </div>
-    </header> -->
+    </header>
 
-    <?php include_once("login_header.php"); ?>
-
-
-    <?php include_once("login_navbar.php"); ?>
-    <?php include_once("login_ctg_bar.php"); ?>
-
-    <form action="user.php" method="get">
+    <?php include_once("admin_navbar.php"); ?>
+    <form action="approved_job.php" method="get">
         <div class="searchbar">
             <input type="search" name="search" placeholder="<?php if (isset($_GET["search"])) {
                 echo $_GET["search"];
@@ -111,8 +108,11 @@ $result = mysqli_query($conn, $sql);
                 $newID = 1;
                 while ($row = mysqli_fetch_assoc($result)) {
                     ?>
-
+                     <form action="approved_job.php" method="get">
                     <div class="job">
+                     <button id="remove" type="submit" name="remove"><i class="fa fa-remove"></i></button>
+                     <input type="hidden" name="id" value ="<?php echo $row['jobId']?>">
+
                         <h2>
                             <?php echo $row["title"]; ?>
                         </h2>
@@ -147,6 +147,7 @@ $result = mysqli_query($conn, $sql);
                             </form>
                         </center>
                     </div>
+                    </form>
 
                     <?php
                     $newID++;
