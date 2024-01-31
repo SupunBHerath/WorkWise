@@ -137,27 +137,28 @@ $result = mysqli_query($conn, $sql);
                                 <?php echo $row["title"]; ?>
                             </h2>
                             <div class="job_details">
-                                <h4>Job Type:</h4>
-                                <p>
-                                    <?php echo $row['job_type']; ?>
-                                </p>
-                                <h4>Company:</h4>
-                                <p>
-                                    <?php echo $row['company']; ?>
-                                </p>
-                                <h4>Location:</h4>
-                                <p>
-                                    <?php echo $row['location']; ?>
-                                </p>
-                                <h4>Price:</h4>
-                                <p>$
-                                    <?php echo $row['price']; ?> per monthly
-                                </p>
-                                <h4>Exit Day:</h4>
-                                <p><span style="color: rgba(255, 0, 0, 0.601);">
-                                        <?php echo $row['exit_day']; ?>
-                                    </span></p>
-                            </div>
+                            
+                            <h4>Job Category:</h4>
+                            <p>
+                                <?php echo $row['category']; ?>
+                            </p>
+                            <h4>Job Type:</h4>
+                            <p>
+                                <?php echo $row['job_type']; ?>
+                            </p>
+                            <h4>Company:</h4>
+                            <p>
+                                <?php echo $row['company']; ?>
+                            </p>
+                            <h4>Location:</h4>
+                            <p>
+                                <?php echo $row['location']; ?>
+                            </p>
+                            <h4>Price:</h4>
+                            <p>$
+                                <?php echo $row['price']; ?> per monthly
+                            </p>
+                        </div>
                             <center>
                                 <form action="more_details.php" method="get">
                                     <button class="apply-btn" type="submit" name="apply">

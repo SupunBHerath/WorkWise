@@ -1,6 +1,10 @@
-<?php include("../conn.php");
-session_start();
-?>
+<?php session_start(); ?>
+<?php 
+if (!isset($_SESSION['id'])) {
+    header('Location: ../login.php');
+    exit();
+} ?>
+<?php include("../conn.php"); ?>
 <?php $active4 = "active"; ?>
 <?php 
 if(isset($_GET['remove'])){
@@ -138,6 +142,11 @@ $result = mysqli_query($conn, $sql);
                             <?php echo $row["title"]; ?>
                         </h2>
                         <div class="job_details">
+                            
+                            <h4>Job Category:</h4>
+                            <p>
+                                <?php echo $row['category']; ?>
+                            </p>
                             <h4>Job Type:</h4>
                             <p>
                                 <?php echo $row['jobType']; ?>
@@ -154,10 +163,6 @@ $result = mysqli_query($conn, $sql);
                             <p>$
                                 <?php echo $row['price']; ?> per monthly
                             </p>
-                            <h4>Exit Day:</h4>
-                            <p><span style="color: rgba(255, 0, 0, 0.601);">
-                                    <?php echo $row['exitDay']; ?>
-                                </span></p>
                         </div>
                         <center>
                             <form action="more_details.php" method="get">

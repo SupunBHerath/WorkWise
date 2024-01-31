@@ -111,6 +111,11 @@ $result = mysqli_query($conn, $sql);
                             <?php echo $row["title"]; ?>
                         </h2>
                         <div class="job_details">
+                            
+                            <h4>Job Category:</h4>
+                            <p>
+                                <?php echo $row['category']; ?>
+                            </p>
                             <h4>Job Type:</h4>
                             <p>
                                 <?php echo $row['jobType']; ?>
@@ -127,10 +132,6 @@ $result = mysqli_query($conn, $sql);
                             <p>$
                                 <?php echo $row['price']; ?> per monthly
                             </p>
-                            <h4>Exit Day:</h4>
-                            <p><span style="color: rgba(255, 0, 0, 0.601);">
-                                    <?php echo $row['exitDay']; ?>
-                                </span></p>
                         </div>
                      
                     </div>
@@ -160,6 +161,4 @@ $result = mysqli_query($conn, $sql);
         <?php
             }
             ?>
-</body>
-
-</html>
+<?php include_once('footer.php')?>

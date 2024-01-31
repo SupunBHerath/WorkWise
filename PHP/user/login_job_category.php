@@ -1,5 +1,10 @@
+<?php session_start(); ?>
+<?php 
+if (!isset($_SESSION['id'])) {
+    header('Location: ../login.php');
+    exit();
+} ?>
 <?php include("../conn.php"); ?>
-<?php session_start();?>
 
 <?php $active2 = "active"; ?>
 
@@ -60,7 +65,11 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/user.css">
+
+    <link rel="stylesheet" href="../../CSS/save_job.css">
+ 
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
 <style>

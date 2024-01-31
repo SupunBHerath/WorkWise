@@ -1,6 +1,12 @@
-<?php include("../conn.php"); 
-session_start();
-?>
+<?php session_start(); ?>
+<?php 
+if (!isset($_SESSION['id'])) {
+    header('Location: ../login.php');
+    exit();
+} ?>
+<?php include("../conn.php"); ?>
+
+
  <?php 
   $fName=$_SESSION['fName'];
   $lName=$_SESSION['lName'];
@@ -135,7 +141,8 @@ session_start();
 
                     <div class="input-group">
                         <label for="email">Password</label>
-                        <input type="password" id="email" name="password" placeholder="Enter your new password">
+                        <input type="password" id="password" name="password" pattern=".{8,}" title="Password must be at least 8 characters" required placeholder="Enter Password (at least 10 characters)">
+
                     </div>
 
                     <div class="input-group">

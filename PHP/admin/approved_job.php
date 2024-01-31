@@ -56,6 +56,7 @@ if (isset($_GET["search"]) || isset($_GET["filter"])) {
 $result = mysqli_query($conn, $sql);
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,6 +78,7 @@ $result = mysqli_query($conn, $sql);
     </header>
 
     <?php include_once("admin_navbar.php"); ?>
+    <?php include_once("admin_ctg_bar.php"); ?>
     <form action="approved_job.php" method="get">
         <div class="searchbar">
             <input type="search" name="search" placeholder="<?php if (isset($_GET["search"])) {
@@ -117,6 +119,11 @@ $result = mysqli_query($conn, $sql);
                             <?php echo $row["title"]; ?>
                         </h2>
                         <div class="job_details">
+                            
+                            <h4>Job Category:</h4>
+                            <p>
+                                <?php echo $row['category']; ?>
+                            </p>
                             <h4>Job Type:</h4>
                             <p>
                                 <?php echo $row['jobType']; ?>
@@ -133,10 +140,6 @@ $result = mysqli_query($conn, $sql);
                             <p>$
                                 <?php echo $row['price']; ?> per monthly
                             </p>
-                            <h4>Exit Day:</h4>
-                            <p><span style="color: rgba(255, 0, 0, 0.601);">
-                                    <?php echo $row['exitDay']; ?>
-                                </span></p>
                         </div>
                         <center>
                             <form action="more_details.php" method="get">

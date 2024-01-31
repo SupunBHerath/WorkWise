@@ -1,8 +1,11 @@
+<?php session_start(); ?>
+<?php 
+if (!isset($_SESSION['id'])) {
+    header('Location: ../login.php');
+    exit();
+} ?>
 <?php include("../conn.php"); ?>
-<?php session_start();?>
-
 <?php $active2 = "active"; ?>
-
 <?php
 $note = "";
 if (isset($_GET["search"]) || isset($_GET["filter"])) {
@@ -64,6 +67,14 @@ $result = mysqli_query($conn, $sql);
     <link rel="stylesheet" href="../../CSS/user.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
+    <style>
+
+    .job_listings {
+  margin-left: 50px;
+  margin-right: 50px;
+   
+}
+    </style>
 </head>
 
 <body>
@@ -173,6 +184,4 @@ $result = mysqli_query($conn, $sql);
         <?php
             }
             ?>
-</body>
-
-</html>
+<?php include_once('login_footer.php')?>

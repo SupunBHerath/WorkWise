@@ -3,7 +3,7 @@
 <div class="navbar" id="navbarid">
     
     <a href=""><img id="logo" src="../../Image/logo/logo1.png" alt="ss"></a>
-    <a class="<?php echo $active1?>" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a class="<?php echo $active1?>" href="admin_home.php"><i class="fa fa-fw fa-home"></i> Home</a>
     <a class="<?php echo $active2?>" href="admin_dashbord.php" ><i class="fa fa-fw fa-search"></i>Admin Dashboard</a>
     <a class="<?php echo $active5?>" href="../index.php" id="login"><i class="fa fa-sign-out "></i> Logo Out</a>
     <a class="<?php echo $active6?>" href="admin_profile.php" id="profile"><div class="pimge" style="background-image: url(../user/UploadImage/<?php echo $_SESSION['image'];?>);"></div> </a>

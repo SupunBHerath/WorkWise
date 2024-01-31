@@ -1,3 +1,10 @@
+<?php session_start(); ?>
+<?php 
+if (!isset($_SESSION['id'])) {
+    header('Location: ../login.php');
+    exit();
+} ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +20,7 @@
 <body>
     <div class="container">
 
-        <a id="backlink" href="user.php"><i class="glyphicon glyphicon-menu-left"></i></a>
+        <a id="backlink" href="home.php"><i class="glyphicon glyphicon-menu-left"></i></a>
         <h1 id="find">Find Freelancers</h1>
         <p>Welcome to our "<strong>Find Freelancers</strong>" section, a space dedicated to showcasing your creative
             projects and talents! Whether you're an artist, designer, photographer, or a creator in any other field, we

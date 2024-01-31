@@ -1,5 +1,10 @@
-<?php include("../conn.php"); ?>
 <?php session_start(); ?>
+<?php 
+if (!isset($_SESSION['id'])) {
+    header('Location: ../login.php');
+    exit();
+} ?>
+<?php include("../conn.php"); ?>
 
 <?php
   $userid = $_SESSION['id'];

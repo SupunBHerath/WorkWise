@@ -1,5 +1,10 @@
-<?php include("../conn.php");
-session_start(); ?>
+<?php session_start(); ?>
+<?php 
+if (!isset($_SESSION['id'])) {
+    header('Location: ../login.php');
+    exit();
+} ?>
+<?php include("../conn.php"); ?>
 <?php
 $note = "";
 $userid = $_SESSION['id'];
@@ -151,7 +156,5 @@ if (isset($_GET["apply"])) {
 
             </div>
         </div>
-
 </body>
-
 </html>

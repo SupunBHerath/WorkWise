@@ -1,3 +1,10 @@
+
+<?php 
+if (!isset($_SESSION['id'])) {
+    header('Location: ../login.php');
+    exit();
+} ?>
+
 <style>
 body{
     margin: 0;

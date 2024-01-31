@@ -14,16 +14,16 @@
 <body>
 
     <div class="navbar" id="navbarid1">
-        <a href="find_job.php">All</a>
-        <a href="job_category.php?ctg=Graphics">Graphics & Design</a>
+        <a href="find_job.php">All                                   </a>
+        <a href="job_category.php?ctg=Graphics">Graphics & Design    </a>
         <a href="job_category.php?ctg=Programming">Programming & Tech</a>
-        <a href="job_category.php?ctg=Digital">Digital Marketing</a>
-        <a href="job_category.php?ctg=Video">Video & Animation</a>
-        <a href="job_category.php?ctg=Writing">Writing & Translation</a>
-        <a href="job_category.php?ctg=Music">Music & Audio</a>
-        <a href="job_category.php?ctg=Business">Business</a>
-        <a href="job_category.php?ctg=AI">AI Services</a>
-        <a href="job_category.php?ctg=New">New*</a>
+        <a href="job_category.php?ctg=Digital">Digital Marketing     </a>
+        <a href="job_category.php?ctg=Video">Video & Animation       </a>
+        <a href="job_category.php?ctg=Writing">Writing & Translation </a>
+        <a href="job_category.php?ctg=Music">Music & Audio           </a>
+        <a href="job_category.php?ctg=Business">Business             </a>
+        <a href="job_category.php?ctg=AI">AI Services                </a>
+        <a href="job_category.php?ctg=New">New*                      </a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>

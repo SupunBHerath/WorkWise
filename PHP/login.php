@@ -1,6 +1,10 @@
 <?php include("conn.php") ?>
+<?php if (session_start()) {
+    session_destroy();
+} ?>
+
 <?php
-// session_destroy();
+
 
 if (isset($_POST["submit"])) {
     $email = $_POST["email"];
@@ -25,7 +29,8 @@ if (isset($_POST["submit"])) {
                     $_SESSION['email'] = $row['email'];
                     $_SESSION['image'] = $row['image'];
                     $_SESSION['role'] = $row['role'];
-                    header('location:user/user.php');
+                    $conn->close();
+                    header('location:user/home.php');
                     exit();
                 } else {
                     session_start();
@@ -35,21 +40,24 @@ if (isset($_POST["submit"])) {
                     $_SESSION['email'] = $row['email'];
                     $_SESSION['image'] = $row['image'];
                     $_SESSION['role'] = $row['role'];
-
-                    header('location:admin/admin_dashbord.php');
+                    $conn->close();
+                    header('location:admin/admin_home.php');
                     exit();
                 }
             } else {
 
                 echo '<script> alert("Incorrect password");</script>';
+               
             }
         } else {
 
             echo '<script> alert("User not found");</script>';
+           
         }
     } else {
 
-        echo '<script> alert("Error fetching user data");</script>';
+        echo '<script> alert("Cant Find user..");</script>';
+        
     }
 
 
@@ -74,20 +82,19 @@ mysqli_close($conn);
 <body>
     <div class="login-container">
         <a href="index.php"> <img src="../Image/logo/logo1.png" alt="logo" class="logo"></a>
-        <a href="index.php"><img src="../Image/logo/X.png" alt="x"
-                style="float: inline-end; width: 20px; height: 20px;"></a>
+        <a href="index.php"><img src="../Image/logo/X.png" alt="x" style="float: inline-end; width: 20px; height: 20px;"></a>
         <br><br>
         <h2>Login to WorkWise</h2><br>
         <form class="loginform" action="login.php" method="post">
             <div class="form-group">
                 <label for="username" style="text-align: left;">Email</label>
-                <input type="email" id="username" name="email" placeholder="Enter your email">
+                <input type="email" id="username" name="email" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
                 <label for="password" style="text-align: left;">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
-            <h5 id="fp"><a href="#">Forgot password ?</a>
+            <h5 id="fp"><a href="froget_password.php">Forgot password ?</a>
             </h5>
             <div class="form-group" id="loginbtn">
                 <button type="submit" name="submit">Login</button>
@@ -95,8 +102,7 @@ mysqli_close($conn);
             </div>
 
         </form>
-        <h5 style="color: red;"> -- Don't you have WorkWise account?<a href="signup.php"
-                style="border: 0; font-size: small; text-decoration: underline;">Sign Up</a>
+        <h5 style="color: red;"> -- Don't you have WorkWise account?<a href="signup.php" style="border: 0; font-size: small; text-decoration: underline;">Sign Up</a>
         </h5>
     </div>
 

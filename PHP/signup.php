@@ -1,4 +1,7 @@
 <?php include("conn.php") ?>
+<?php if(session_start()) {
+    session_destroy();
+} ?>
 <?php
 if (isset($_POST["submit"])) {
     $fName = $_POST["fName"];
@@ -65,7 +68,7 @@ if (isset($_POST["submit"])) {
             <br>
             <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
             <br>
-            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="password" id="password" name="password" pattern=".{8,}" title="Password must be at least 8 characters" required placeholder="Enter Password (at least 10 characters)">
             <br>
             <input type="password" id="confirmpassword" name="cpassword" placeholder="Confirm password" required>
             <br>
@@ -90,7 +93,8 @@ if (isset($_POST["submit"])) {
 
         </div>
     </form>
-
+   
 </body>
 
 </html>
+<?php $conn->close(); ?>

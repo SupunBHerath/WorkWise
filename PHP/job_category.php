@@ -59,7 +59,8 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/user.css">
+    <!-- <link rel="stylesheet" href="../CSS/user.css"> -->
+    <link rel="stylesheet" href="../CSS/save_job.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
 <style>
@@ -193,6 +194,11 @@ $result = mysqli_query($conn, $sql);
                             <?php echo $row["title"]; ?>
                         </h2>
                         <div class="job_details">
+                            
+                            <h4>Job Category:</h4>
+                            <p>
+                                <?php echo $row['category']; ?>
+                            </p>
                             <h4>Job Type:</h4>
                             <p>
                                 <?php echo $row['jobType']; ?>
@@ -209,10 +215,6 @@ $result = mysqli_query($conn, $sql);
                             <p>$
                                 <?php echo $row['price']; ?> per monthly
                             </p>
-                            <h4>Exit Day:</h4>
-                            <p><span style="color: rgba(255, 0, 0, 0.601);">
-                                    <?php echo $row['exitDay']; ?>
-                                </span></p>
                         </div>
                       
                     </div>
@@ -241,8 +243,8 @@ $result = mysqli_query($conn, $sql);
 
         <?php
             }
-$conn->close();
 ?>
 </body>
 
 </html>
+<?php $conn->close(); ?>

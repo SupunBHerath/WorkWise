@@ -1,5 +1,12 @@
-<?php include("../conn.php"); ?>
+
 <?php session_start(); ?>
+<?php 
+if (!isset($_SESSION['id'])) {
+    header('Location: ../login.php');
+    exit();
+} ?>
+<?php include("../conn.php"); ?>
+
 <?php if (isset($_POST['submit'])) {
     if ($_POST['submit'] == 'Add Job') {
         $userid = $_SESSION['id'];
