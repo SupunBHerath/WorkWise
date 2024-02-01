@@ -1,15 +1,22 @@
 <style>
     /* -- Footer -- */
-
-    footer {
+    .body {
+        background-color: white;
+       
         background-position: center;
-
+        margin: 0;
+        padding: 0;
         line-height: 1.2;
         scroll-behavior: smooth;
         box-sizing: border-box;
+        margin-bottom: 0;
+        margin-top: 150px;
+    }
+
+    footer {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 150px;
+        margin-top: auto;
         background-color: rgb(2, 54, 2);
 
         padding: 60px 10%;
@@ -90,65 +97,66 @@
 </style>
 <!-- <link rel="stylesheet" href="../CSS/footer.css" > -->
 
+<div class="body">
+    <footer>
 
-<footer>
+        <div class="footer-column">
+            <h4>JOb Category</h4>
+            <ul>
+                <li> <a href="find_job.php">All </a></li>
+                <li> <a href="job_category.php?ctg=Graphics">Graphics & Design </a></li>
+                <li> <a href="job_category.php?ctg=Programming">Programming & Tech</a></li>
+                <li> <a href="job_category.php?ctg=Digital">Digital Marketing </a></li>
+                <li> <a href="job_category.php?ctg=Video">Video & Animation </a></li>
+                <li> <a href="job_category.php?ctg=Writing">Writing & Translation </a></li>
+                <li> <a href="job_category.php?ctg=Music">Music & Audio </a></li>
+                <li> <a href="job_category.php?ctg=Business">Business </a></li>
+                <li> <a href="job_category.php?ctg=AI">AI Services </a></li>
+                <li> <a href="job_category.php?ctg=New">New* </a></li>
 
-    <div class="footer-column">
-        <h4>JOb Category</h4>
-        <ul>
-            <li> <a href="find_job.php">All </a></li>
-            <li> <a href="job_category.php?ctg=Graphics">Graphics & Design </a></li>
-            <li> <a href="job_category.php?ctg=Programming">Programming & Tech</a></li>
-            <li> <a href="job_category.php?ctg=Digital">Digital Marketing </a></li>
-            <li> <a href="job_category.php?ctg=Video">Video & Animation </a></li>
-            <li> <a href="job_category.php?ctg=Writing">Writing & Translation </a></li>
-            <li> <a href="job_category.php?ctg=Music">Music & Audio </a></li>
-            <li> <a href="job_category.php?ctg=Business">Business </a></li>
-            <li> <a href="job_category.php?ctg=AI">AI Services </a></li>
-            <li> <a href="job_category.php?ctg=New">New* </a></li>
-
-        </ul>
-    </div>
-
-
+            </ul>
+        </div>
 
 
-    <div class="footer-column">
-        <h4>About Us</h4>
-        <ul>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">Press & News</a></li>
-            <li><a href="#">Partnerships</a></li>
-            <li><a href="#">Terms of Service</a></li>
 
 
-        </ul>
-    </div>
-    <div class="footer-column">
-        <h4>Support </h4>
-        <ul>
-            <li><a href="#">Help & Support</a></li>
-            <li><a href="#">Trust & Safety</a></li>
+        <div class="footer-column">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Press & News</a></li>
+                <li><a href="#">Partnerships</a></li>
+                <li><a href="#">Terms of Service</a></li>
 
-        </ul>
-    </div>
 
-    <div class="footer-column">
-        <h4>My Account</h4>
-        <ul>
-            <li><a href="#">My account</a></li>
-            <li><a href="#">Find Talenter </a></li>
-            <li><a href="#">Find Freelance </a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Support </h4>
+            <ul>
+                <li><a href="#">Help & Support</a></li>
+                <li><a href="#">Trust & Safety</a></li>
 
-        </ul>
-    </div>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>My Account</h4>
+            <ul>
+                <li><a href="#">My account</a></li>
+                <li><a href="#">Find Talenter </a></li>
+                <li><a href="#">Find Freelance </a></li>
+
+            </ul>
+        </div>
 
         <div class="text">
             <P> &copy; Copyright 2023 workwise Group. All right reserved </P>
         </div>
 
 
-</footer>
+    </footer>
+</div>
 <!-- Footer -->
 
 </body>

@@ -1,52 +1,28 @@
-<?php if(session_start()) {
+<?php if (session_start()) {
     session_destroy();
-    
 } ?>
+<?php require_once('conn.php') ?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../CSS/index.css">
-    <style>
-  .job1 img {
-            width: 100%;
-            height: 180px;
-        }
 
-        .job1 a {
-            text-decoration: none;
-            font-size: 18px;
-            margin-bottom: auto;
-            text-align: center;
-            color: rgb(2, 2, 2);
-            font-weight: 900;
-            margin-top: 10px;
-        }
-
-        .job1 :hover {
-            text-decoration: none;
-            color: blue;
-            font-weight: 900;
-            font-size: 20px;
-            transition: .5s;
-        }
-
-        .job1 {
-            cursor: pointer;
-        }
-    </style>
 </head>
 
 <body>
     <?php include_once('navbar.php') ?>
 
+
+
+
     <div class="div_flex">
         <div class="flex_left">
             <h1 id="text1">Find the right <span id="freel">freelance </span> service, right away</h1>
             <div class="search_div">
-                <input type="text" class="search_bar" placeholder="Search...">
-                <button class="search_btn">Search</button>
+                <!-- <input type="text" class="search_bar" placeholder="Search...">
+                <button class="search_btn">Search</button> -->
             </div>
         </div>
         <div class="flex_right"></div>
@@ -55,42 +31,72 @@
     <br>
     <h1 id="text2">Popular job categories</h1>
 
+
     <div class="jobctg_div">
+        <div class="job_row">
+            <?php
+            // $sql = "SELECT * FROM jobtable WHERE category IN (SELECT DISTINCT category FROM jobtable ORDER BY category LIMIT 5)";
+            $sql = "SELECT category, count(category) AS category_count FROM jobtable GROUP BY category ORDER BY category_count DESC LIMIT 5";
 
-        <a href="login_job_category.php?ctg=Graphics">
-            <div class="job1">
-                <img src="../Image/FT/GD.png" alt="">
-                <a href="login_job_category.php?ctg=Graphics">Graphics & Design</a>
-                <br>
+            $result = $conn->query($sql);
 
-            </div>
-        </a>
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
 
-        <a href="job_category.php?ctg=Programming">
-            <div class="job1">
-                <img src="../Image/FT/SD2.jpg" alt="">
-                <a href="job_category.php?ctg=Programming">Programming & Tech</a>
-            </div>
-        </a>
-        <a href="job_category.php?ctg=Digital">
-            <div class="job1">
-                <img src="../Image/FT/DA.gif" alt="">
-                <a href="job_category.php?ctg=Digital">Digital Marketing</a>
-            </div>
-        </a>
-        <a href="job_category.php?ctg=Business">
-            <div class="job1">
-                <img src="../Image/FT/EC.gif" alt="">
-                <a href="job_category.php?ctg=Business">Business</a>
-            </div>
-        </a>
-        <a href="job_category.php?ctg=AI">
-            <div class="job1">
-                <img src="../Image/FT/AI.gif" alt="">
-                <a href="job_category.php?ctg=AI">AI Services</a>
-            </div>
-        </a>
+            ?>
+                    <div class="job1">
+                        <a href="job_category.php?ctg=<?php echo $row['category']?>">
+                            <div class="job_img">
+                                <img src="../Image/FT/<?php echo $row['category']?>.png" alt="Image Updating ">
+                            </div>
+                            <?php 
+                            $ctg=$row['category'];
+                            if($ctg=="Graphics"){
+                                $c1='Graphics & Design';
+                            }elseif($ctg=="Programming"){
+                                $c1='Programming & Tech';
+                            }elseif($ctg=="Digital"){
+                                $c1='Digital Marketing';
+                            }elseif($ctg=="Video"){
+                                $c1='Video & Animation';
+                            }elseif($ctg=="Writing"){
+                                $c1='Writing & Translation';
+                            }elseif($ctg=="Music"){
+                                $c1='Music & Audio';
+                            }elseif($ctg=="Business"){
+                                $c1='Business';
+                            }elseif($ctg=="AI"){
+                                $c1='AI Services';
+                            }else{
+                                $c1='New Job category';
+                            }
+                            ?>
+                            <a href="job_category.php?ctg=<?php echo $row['category']?>"><?php echo $c1;?></a>
+                            <br>
+                        </a>
+                    </div>
+
+            <?php      }
+            } else {
+                $count=0;
+                while ($count<5){?>
+                    <div class="job1">
+                    <a href="#">
+                        <div class="job_img">
+                            <img src="../Image/FT/<?php echo 'coming'?>" alt=".<?php echo 'coming soon'?>">
+                        </div>
+                        <a href="#"><?php echo 'coming soon';?>/a>
+                        <br>
+                    </a>
+                </div>
+             <?php   }
+              
+            } ?>
+
+        </div>
     </div>
+
+
     <br>
     <div class="foruser_div">
         <h1 id="ftyw_text">Find great <br> work</h1>

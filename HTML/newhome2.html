@@ -87,25 +87,27 @@
             font-size: 50px;
         }
 
+
         .jobctg_div {
 
-            margin: auto;
-            display: flex;
-            flex-direction: row;
-            width: 95%;
-            height: 240px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 90%;
+            margin: 20px auto;
         }
 
         .job1 {
-            text-align: center;
-            flex: 25%;
-            margin: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid #ddd;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            background-color: red;
         }
 
         .job1 img {
             width: 100%;
-            height: auto;
+            height: 200px;
         }
 
         .job1 a {
@@ -116,11 +118,26 @@
             color: rgb(2, 2, 2);
             font-weight: 900;
             margin-top: 10px;
-
-
-
-
         }
+        
+        .job_row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+
+        .job_img {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+
+        .job1:hover {
+            transform: scale(1.05);
+        }
+
 
         .imagebar {
             padding: auto;
@@ -143,7 +160,7 @@
             background-image: url(../Image/Home/women2.png);
             background-repeat: no-repeat;
             background-position: top left;
-            
+
             background-size: cover;
             box-shadow: 0 0 10px rgba(0, 0, 0, .8);
             border-radius: 20px;
@@ -157,15 +174,18 @@
             font-weight: 900;
             margin-bottom: 0;
         }
-        #ftyw_text2{
+
+        #ftyw_text2 {
             font-size: 25px;
             color: rgb(218, 213, 213);
             font-weight: 900;
             width: 400px;
             margin: 20px 50px;
-            
+
         }
-        .div3 a ,.foruser_div a {
+
+        .div3 a,
+        .foruser_div a {
             text-decoration: none;
             font-size: 18px;
             margin-bottom: auto;
@@ -177,7 +197,7 @@
             border-radius: 20px;
         }
 
-        .div3{
+        .div3 {
             display: flex;
             flex-direction: row;
             margin-top: 50px;
@@ -189,16 +209,23 @@
             border-radius: 20px;
 
         }
-        .left_div3{
+
+        .left_div3 {
             flex: 50%;
             background-image: url(../Image/Home/searchf.jpg);
             background-position: center;
             background-size: cover;
         }
-        .right_div3{
+
+        .right_div3 {
             flex: 50%;
-          
+
         }
+
+
+
+
+
 
         @media (max-width: 1133px) {
             .div_flex {
@@ -244,9 +271,8 @@
 
 
             }
-            .job1{
-                height: 100px;
-            }
+
+        
 
         }
     </style>
@@ -269,58 +295,69 @@
     <h1 id="text2">Popular job categories</h1>
 
     <div class="jobctg_div">
+        <div class="job_row">
 
-        <div class="job1">
-            <img src="../Image/FT/GD.png" alt="">
-            <a href="">Graphics & Design</a>
-            <br>
 
-        </div>
+            <div class="job1">
+                <div class="job_img">
+                    <img src="../Image/FT/GD.png" alt="">
+                </div>
+                <center>
+                    <a href="#">
+                        More Details
+                    </a>
+                </center>
+                <br>
+            </div>
 
-        <div class="job1">
-            <img src="../Image/FT/GD.png" alt="">
-            <a href="">Programming & Tech</a>
-        </div>
 
-        <div class="job1">
-            <img src="../Image/FT/GD.png" alt="">
-            <a href="">Digital Marketing</a>
-        </div>
-        <div class="job1">
-            <img src="../Image/FT/GD.png" alt="">
-            <a href="">Digital Marketing</a>
-        </div>
-        <div class="job1">
-            <img src="../Image/FT/GD.png" alt="">
+            <div class="job1">
+                <img src="../Image/FT/GD.png" alt="">
+                <a href="">Programming & Tech</a>
+            </div>
 
-            <a href="">Digital Marketing</a>
+            <div class="job1">
+                <img src="../Image/FT/GD.png" alt="">
+                <a href="">Digital Marketing</a>
+            </div>
+            <div class="job1">
+                <img src="../Image/FT/GD.png" alt="">
+                <a href="">Digital Marketing</a>
+            </div>
+            <div class="job1">
+                <img src="../Image/FT/GD.png" alt="">
 
+                <a href="">Digital Marketing</a>
+            </div>
         </div>
     </div>
+
+
+
 
     <div class="foruser_div">
         <h1 id="ftyw_text">Find great <br> work</h1>
         <p id="ftyw_text2">
             Meet clients you’re excited to work with and take
             your career or business to new heights.
-    </p>
-    <br>
-     <p ><a href="">Register Now </a></p>
+        </p>
+        <br>
+        <p><a href="">Register Now </a></p>
     </div>
 
-<div class="div3">
-    <div class="left_div3"></div>
-    <div class="right_div3">
-        <h1 id="ftyw_text">Find talent <br> your way</h1>
-        <p id="ftyw_text2">
-         Work with the largest network of independent
-         professionals and get things done from quick 
-         turnarounds to big transformations.
-    </p>
-    <br>
-     <p ><a href="">Register Now </a></p>
+    <div class="div3">
+        <div class="left_div3"></div>
+        <div class="right_div3">
+            <h1 id="ftyw_text">Find talent <br> your way</h1>
+            <p id="ftyw_text2">
+                Work with the largest network of independent
+                professionals and get things done from quick
+                turnarounds to big transformations.
+            </p>
+            <br>
+            <p><a href="">Register Now </a></p>
+        </div>
     </div>
-</div>
 </body>
 
 </html>

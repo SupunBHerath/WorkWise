@@ -21,10 +21,7 @@ if (isset($_GET["search"]) || isset($_GET["filter"])) {
             $sql = "SELECT * FROM jobtable WHERE (title LIKE '%$search%' OR company LIKE '%$search%' OR location LIKE '%$search%' OR price LIKE '%$search%' OR exitDay LIKE '%$search%') AND jobType = '$filter'";
             $result = mysqli_query($conn, $sql);
             if ($result == false) {
-
-
             }
-
         } else {
             // echo '<script> alert("Data not found.");</script>';
 
@@ -38,12 +35,9 @@ if (isset($_GET["search"]) || isset($_GET["filter"])) {
                 // echo '<script> alert("Data not found.");</script>';
                 $note = "Data not found.";
             }
-
         } else {
             $sql = "SELECT * FROM jobtable ";
-
         }
-
     }
 } else {
     $sql = "SELECT * FROM jobtable ";
@@ -77,10 +71,10 @@ $result = mysqli_query($conn, $sql);
     <form action="find_job.php" method="get">
         <div class="searchbar">
             <input type="search" name="search" placeholder="<?php if (isset($_GET["search"])) {
-                echo $_GET["search"];
-            } else {
-                echo "Search";
-            } ?>">
+                                                                echo $_GET["search"];
+                                                            } else {
+                                                                echo "Search";
+                                                            } ?>">
 
             <select name="filter" id="">
                 <option value="All Type">Job Type</option>
@@ -104,14 +98,14 @@ $result = mysqli_query($conn, $sql);
             if ($result && mysqli_num_rows($result) > 0) {
                 $newID = 1;
                 while ($row = mysqli_fetch_assoc($result)) {
-                    ?>
+            ?>
 
                     <div class="job">
                         <h2>
                             <?php echo $row["title"]; ?>
                         </h2>
                         <div class="job_details">
-                            
+
                             <h4>Job Category:</h4>
                             <p>
                                 <?php echo $row['category']; ?>
@@ -133,32 +127,35 @@ $result = mysqli_query($conn, $sql);
                                 <?php echo $row['price']; ?> per monthly
                             </p>
                         </div>
-                     
+
                     </div>
 
-                    <?php
+                <?php
                     $newID++;
                 }
                 ?>
-            </div>
         </div>
-        <?php
+    </div>
+<?php
             } else {
                 // echo '<script> alert("Data not found.");</script>';
                 $note = "Data not found.";
-                ?>
+?>
 
-        <div class="note" style="width:100%; text-align: center; ">
-            <h1 style="color: red">
-                <?php
+    <div class="note" style="width:100%; text-align: center; ">
+        <h1 style="color: red">
+            <?php
                 echo $note;
-                ?>
-            </h1>
-        </div>
-
-
-
-        <?php
-            }
             ?>
-<?php include_once('footer.php')?>
+        </h1>
+    </div>
+
+
+
+<?php
+            }
+?>
+
+<?php if ($note != 'Data not found.') {
+    include_once('footer.php');
+}

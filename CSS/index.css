@@ -82,7 +82,7 @@ body{
     font-size: 50px;
 }
 
-.jobctg_div {
+/* .jobctg_div {
 
     margin: auto;
     display: flex;
@@ -123,7 +123,62 @@ body{
 
 .job1 {
     cursor: pointer;
+} */
+
+.jobctg_div {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 90%;
+    margin: 20px auto;
 }
+
+.job1 {
+    border: 3px solid #ddd;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+}
+
+.job1 img {
+    width: 100%;
+    height: 200px;
+}
+
+.job1 a {
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: auto;
+    text-align: center;
+    color: rgb(8, 167, 27);
+    font-weight: 900;
+    margin-top: 10px;
+}
+
+.job_row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+
+.job_img {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+.job1:hover {
+    transform: scale(1.05);
+}
+
+
+
+
 
 .imagebar {
     padding: auto;
@@ -194,7 +249,7 @@ body{
 }
 .left_div3{
     flex: 50%;
-    background-image: url(../Image/Home/searchf.jpg);
+    background-image: url(../Image/FT/jobv.png);
     background-position: center;
     background-size: cover;
 }

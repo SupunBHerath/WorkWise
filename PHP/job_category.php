@@ -65,7 +65,7 @@ $result = mysqli_query($conn, $sql);
     <title>Document</title>
 <style>
 #seardiv{
-   background-image: url(../Image/Home/ctg2.jpg);
+   background-image: url(../Image/Home/ctg4.png);
    background-position: center;
    background-size: cover;
    background-repeat: none;
