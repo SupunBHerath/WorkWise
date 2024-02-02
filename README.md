@@ -1,2 +1,0 @@
-# WorkWise
-Online Job Website

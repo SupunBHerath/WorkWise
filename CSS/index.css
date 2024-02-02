@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
 }
@@ -8,18 +8,55 @@ body{
     flex-direction: row;
     font-size: 30px;
     text-align: center;
-    background-color: rgb(2, 54, 2);
+    background-color: rgb(3, 56, 3);
     height: 615px;
 }
 
 .flex_left {
+    color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
     margin-top: auto;
     margin-bottom: auto;
-    padding: 10px;
     flex: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.div_flex .flex_left h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    margin-top: 70px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.div_flex .flex_left h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+
+}
+
+.div_flex .flex_left button {
+    padding: 20px 40px;
+    font-size: 15px;
+    font-weight: 800;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    transition: all 0.5s;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.div_flex .flex_left button:hover {
+    background-color: #5f95be;
+    color: #fff;
 }
 
 .flex_right {
@@ -35,39 +72,7 @@ body{
     font-style: italic;
 }
 
-.search_div {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-left: 30px;
-}
 
-.search_bar {
-    padding: 15px;
-    font-size: 14px;
-    border: none;
-    border-radius: 4px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    outline: none;
-    width: 80%;
-}
-
-.search_btn {
-    background-color: #4caf50;
-    font-size: 14px;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    padding: 15px 12px;
-    cursor: pointer;
-}
-
-.search_btn:hover {
-    background-color: #45a049;
-}
 
 #text1 {
     color: white;
@@ -82,48 +87,6 @@ body{
     font-size: 50px;
 }
 
-/* .jobctg_div {
-
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    width: 95%;
-    height: 240px;
-}
-
-.job1 {
-    text-align: center;
-    flex: 25%;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.job1 img {
-    width: 100%;
-    height: 180px;
-}
-
-.job1 a {
-    text-decoration: none;
-    font-size: 18px;
-    margin-bottom: auto;
-    text-align: center;
-    color: rgb(2, 2, 2);
-    font-weight: 900;
-    margin-top: 10px;
-}
-
-.job1 :hover {
-    text-decoration: none;
-    color: blue;
-    font-weight: 900;
-    font-size: 20px;
-    transition: .5s;
-}
-
-.job1 {
-    cursor: pointer;
-} */
 
 .jobctg_div {
 
@@ -201,7 +164,7 @@ body{
     background-image: url(../Image/Home/women2.png);
     background-repeat: no-repeat;
     background-position: top left;
-    
+
     background-size: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, .8);
     border-radius: 20px;
@@ -215,15 +178,18 @@ body{
     font-weight: 900;
     margin-bottom: 0;
 }
-#ftyw_text2{
+
+#ftyw_text2 {
     font-size: 25px;
     color: rgb(218, 213, 213);
     font-weight: 900;
     width: 400px;
     margin: 20px 50px;
-    
+
 }
-.div3 a ,.foruser_div a {
+
+.div3 a,
+.foruser_div a {
     text-decoration: none;
     font-size: 18px;
     margin-bottom: auto;
@@ -235,7 +201,7 @@ body{
     border-radius: 20px;
 }
 
-.div3{
+.div3 {
     display: flex;
     flex-direction: row;
     margin-top: 50px;
@@ -247,63 +213,87 @@ body{
     border-radius: 20px;
 
 }
-.left_div3{
+
+.left_div3 {
     flex: 50%;
     background-image: url(../Image/FT/jobv.png);
     background-position: center;
     background-size: cover;
 }
-.right_div3{
+
+.right_div3 {
     flex: 50%;
-  
-}
-
-@media (max-width: 1133px) {
-    .div_flex {
-        flex-direction: column;
-        height: 500px;
-    }
-
-    .flex_right {
-        display: none;
-    }
-
-    .flex_left {
-        margin-top: 150px;
-        font-size: 25px;
-    }
-
-    .search_div {
-        margin-left: 70px;
-
-
-    }
-
 
 }
-
-@media (max-width: 890) {
-    .div_flex {
-        flex-direction: column;
-        height: 300px;
+@media (max-width: 1200px) {
+   
+    .job_row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
-
-    .flex_right {
-        display: none;
+    .left_div3 {
+        flex: 60%;
+       
     }
+    
+    .right_div3 {
+        flex: 40%;
+    
+    }
+}
 
-    .flex_left {
+@media (max-width: 1100px) {
+    .div_flex .flex_left h2 {
+        font-size: 48px;
         margin-top: 50px;
-        font-size: 25px;
+    
     }
-
-    .search_div {
-        margin-left: 70px;
-
-
+    .div_flex .flex_left h3 {
+        font-weight: 600;
+        font-size: 30px;
+       
+    
     }
-    .job1{
-        height: 100px;
+    
+    .div_flex .flex_left button {
+        margin-top: 0px;
+    
     }
+   
+    .flex_right {
 
+        background-position: center;
+        background-size: cover ;
+    }
+ 
+}
+
+
+
+@media (max-width: 890px) {
+    .div_flex .flex_left h2 {
+        font-size: 35px;
+
+    
+    }
+    .div_flex .flex_left h3 {
+       
+        font-size: 20px;
+       
+    
+    }
+    .job_row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #ftyw_text2 {
+        font-size: 20px;
+        margin: 20px 50px;
+    
+    }
+    #ftyw_text {
+        font-size: 50px;
+    }
+    
+  
 }

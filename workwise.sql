@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2024 at 05:58 PM
+-- Generation Time: Feb 01, 2024 at 07:13 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -93,41 +93,27 @@ CREATE TABLE `jobtable` (
 --
 
 INSERT INTO `jobtable` (`jobId`, `userId`, `category`, `title`, `jobType`, `company`, `location`, `price`, `exitDay`, `responsibilities`, `requirements`, `payment`) VALUES
-(1, 0, 'Programming', 'Software Developer', 'Full Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', '', 0),
-(3, 0, 'Programming', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', '', 0),
-(4, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', '', 0),
-(5, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', '', 0),
-(6, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', '', 0),
-(7, 0, 'Programming', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', '', 0),
-(8, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', '', 0),
-(9, 0, 'Graphics', 'Software Developer', 'Full Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving ', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills\r\nBachelor\'s degree in Computer Science or related field Proven experience', 0),
-(10, 0, 'Graphics', 'abc', 'Part-time', 'abc', 'cc', 56, '0000-00-00', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving ', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills', 0),
-(11, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving ', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills', 0),
-(12, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills', 0),
-(13, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills', 0),
-(14, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills', 0),
-(15, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills', 0),
-(16, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills', 0),
-(17, 0, 'Graphics', 'Software Developer', 'Full Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills', 0),
-(18, 0, 'Graphics', 'abc', 'Part-time', 'abc', 'cc', 56, '0000-00-00', 'cc', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills', 0),
-(19, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills', 0),
-(20, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 0, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills', 0),
-(21, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills', 0),
-(22, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills', 0),
-(23, 0, 'Graphics', 'Software Developer', 'Part Time', 'XYZ Designs', 'Another City, Country', 600, '2024-01-31', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Bachelor\'s degree in Computer Science or related field Proven experience in software development Strong problem-solving skills', 0),
-(26, 0, 'Graphics', 'w', '', 'w', 'w', 7, '0000-00-00', 'w', '', 0),
-(27, 0, 'Graphics', 'w', '', 'w', 'w', 7, '0000-00-00', 'w', '', 0),
-(28, 0, 'Graphics', 'w', 'Full Time', 'w', 'w', 7, '2024-01-27', 'w', '', 0),
-(29, 0, 'Graphics', 'w', 'Full Time', 'w', 'w', 7, '2024-01-27', 'w', 'w', 0),
-(30, 0, 'Graphics', 'w', 'Full Time', 'w', 'w', 7, '2024-01-27', 'w', 'w', 0),
-(31, 0, 'Graphics', 'q', 'Full Time', 'q', 'q', 4, '2024-01-19', 'q', 'q', 0),
-(32, 0, 'Graphics', 'q', 'Full Time', 'q', 'q', 4, '2024-01-19', 'q', 'q', 0),
-(33, 0, 'Graphics', 'q', 'Full Time', 'q', 'q', 4, '2024-01-19', 'q', 'q', 0),
-(37, 1, 'Graphics', '5', 'Full Time', '2', '1', 1, '2024-01-19', '2', '2', 0),
-(39, 0, 'Graphics', 'a', 'Full Time', 'a', 'a', 4, '2024-01-20', '4', '5', 0),
-(40, 0, 'Graphics', 'v', 'Full Time', '4', 'w', 6, '2024-01-12', '3', '3', 0),
-(41, 8, 'Business', 'v', 'Full Time', 's', 's', 45, '2024-01-26', 's', 's', 0),
-(42, 9, 'Programming', 'software engineer', 'Full Time', 'virtusa', 'colombo 10', 10000, '2024-02-29', 'develop the backend', 'Bsc degree', 0);
+(1, 1, 'Graphics', 'Graphic Designer', 'Full Time', 'Creative Studios', 'New York, NY', 50000, '2024-08-01', 'Create visual concepts for various design projects.', 'Proficient in Adobe Creative Suite.', 10),
+(2, 1, 'Programming', 'Software Developer', 'Part Time', 'CodeCraft Inc.', 'San Francisco, CA', 30000, '2024-07-15', 'Develop and maintain software applications.', 'Experience with Java and Python.', 20),
+(3, 1, 'Digital', 'Digital Marketing Sp', 'Full Time', 'Digital Solutions Ag', 'Los Angeles, CA', 45000, '2024-09-01', 'Create and execute online marketing campaigns.', 'Experience with SEO, SEM, and social media advertising.', 30),
+(4, 1, 'Video', 'Video Editor', 'Full Time', 'FilmCuts Studio', 'Chicago, IL', 55000, '2024-08-15', 'Edit and produce engaging video content.', 'Proficient in video editing software.', 35),
+(5, 1, 'Writing', 'Content Writer', 'Freelance', 'WordCraft Creations', 'Miami, FL', 20000, '2024-07-30', 'Create compelling and SEO-friendly written content.', 'Excellent writing and editing skills.', 10),
+(6, 1, 'Music', 'Music Composer', 'Full Time', 'Harmony Studios', 'Austin, TX', 60000, '2024-09-15', 'Compose original music for various projects.', 'Proficient in music composition software.', 20),
+(7, 1, 'Music', 'Music Producer', 'Part Time', 'BeatMasters Co.', 'Nashville, TN', 35000, '2024-08-10', 'Produce and arrange music tracks.', 'Experience in music production, knowledge of audio equipment.', 30),
+(8, 1, 'Music', 'Live Music Performer', 'Freelance', 'StageSounds Entertai', 'Seattle, WA', 15000, '2024-09-01', 'Perform live music at events and venues.', 'Musical talent, stage presence.', 35),
+(9, 1, 'Graphics', 'UI/UX Designer', 'Full Time', 'PixelPerfect Design', 'Phoenix, AZ', 48000, '2024-08-20', 'Design user interfaces for websites and applications.', 'UI/UX design experience, proficiency in design tools.', 10),
+(10, 1, 'Programming', 'Web Developer', 'Full Time', 'WebTech Solutions', 'Portland, OR', 55000, '2024-07-25', 'Develop and maintain web applications.', 'Experience with HTML, CSS, and JavaScript.', 20),
+(11, 1, 'Digital', 'Social Media Manager', 'Full Time', 'SocialBuzz Agency', 'Atlanta, GA', 40000, '2024-09-10', 'Manage social media accounts and campaigns.', 'Social media marketing experience.', 30),
+(12, 1, 'Video', 'Videographer', 'Part Time', 'CineCapture Producti', 'Houston, TX', 25000, '2024-08-05', 'Capture and edit video footage for various projects.', 'Experience in videography, proficiency in video editing software.', 35),
+(13, 1, 'Writing', 'Technical Writer', 'Full Time', 'TechDocs Ltd.', 'Las Vegas, NV', 48000, '2024-07-15', 'Create technical documentation for software and products.', 'Technical writing experience, attention to detail.', 10),
+(14, 1, 'Music', 'Sound Engineer', 'Full Time', 'AudioCraft Studios', 'Minneapolis, MN', 60000, '2024-09-20', 'Record and mix audio for music and other projects.', 'Experience in audio engineering, knowledge of recording equipment.', 20),
+(15, 1, 'Graphics', 'Motion Graphics Desi', 'Full Time', 'MotionMasters Co.', 'Orlando, FL', 55000, '2024-08-30', 'Create animated graphics and visual effects.', 'Proficient in motion graphics software.', 30),
+(16, 1, 'Programming', 'Database Administrat', 'Full Time', 'DataSolutions Inc.', 'Detroit, MI', 70000, '2024-09-05', 'Administer and maintain databases.', 'Experience in database administration, SQL proficiency.', 35),
+(17, 1, 'Digital', 'SEO Specialist', 'Part Time', 'SEOPro Agency', 'Salt Lake City, UT', 30000, '2024-08-15', 'Optimize websites for search engines.', 'SEO experience, knowledge of search engine algorithms.', 10),
+(18, 1, 'Video', 'Production Assistant', 'Full Time', 'FilmWorks Production', 'Charlotte, NC', 35000, '2024-07-20', 'Assist in various aspects of video production.', 'Interest in film production, willingness to learn.', 20),
+(19, 1, 'Writing', 'Copywriter', 'Freelance', 'CopyCraft Communicat', 'San Diego, CA', 20000, '2024-09-10', 'Create persuasive and engaging written content.', 'Copywriting experience, creativity.', 30),
+(20, 1, 'Music', 'Music Teacher', 'Full Time', 'Harmony Academy', 'Raleigh, NC', 55000, '2024-08-25', 'Teach music to students of all ages.', 'Music education degree, teaching experience.', 35),
+(21, 1, 'Graphics', 'Graphic Designer', 'Full Time', 'Creative Studios', 'New York, NY', 50000, '2024-08-01', 'Create visual concepts for various design projects.', 'Proficient in Adobe Creative Suite.', 10);
 
 -- --------------------------------------------------------
 
@@ -232,7 +218,7 @@ ALTER TABLE `bmjob`
 -- AUTO_INCREMENT for table `jobtable`
 --
 ALTER TABLE `jobtable`
-  MODIFY `jobId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `jobId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `unapproved_job`

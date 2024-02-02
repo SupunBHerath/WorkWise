@@ -60,7 +60,7 @@ $result = mysqli_query($conn, $sql);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="../CSS/user.css"> -->
-    <link rel="stylesheet" href="../CSS/save_job.css">
+    <link rel="stylesheet" href="../CSS/job_list.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
 <style>
@@ -71,14 +71,14 @@ $result = mysqli_query($conn, $sql);
    background-repeat: none;
    
     width: 90%;
-    height: 180px;
+    height: 200px;
     margin: 10px auto;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     
 }
 .searchbar2{
-    margin-top: 30px;
+    margin-top: 0px;
 }
 #ctg_name{
     color: white;
@@ -117,7 +117,7 @@ $result = mysqli_query($conn, $sql);
     <?php include_once("ctg_bar.php"); ?>
 
     <form action="job_category.php" method="get">
-        <div class="searchbar" id="seardiv">
+        <div class="searchbar" id="seardiv" >
             <?php 
             $ctg=$_GET['ctg'];
             if($ctg=='Graphics'){
@@ -157,18 +157,19 @@ $result = mysqli_query($conn, $sql);
             <h1 id="ctg_name"><?php echo $c1;?></h1>
             <h3 id="ctg_ds"><?php echo $c2;?></h3>
             
-            <input class="searchbar2"  type="search" name="search" placeholder="<?php if (isset($_GET["search"])) {
-                echo $_GET["search"];
-            } else {
-                echo "Search";
-            } ?>">
+            <input id="fsearch" type="search" name="search" placeholder="<?php if (isset($_GET["search"])) {
+                                                                echo $_GET["search"];
+                                                            } else {
+                                                                echo "Search jobs...";
+                                                            } ?>">
 
-            <select class="searchbar2" name="filter" id="">
+            <select name="filter"  id="idcheck " >
                 <option value="All Type">Job Type</option>
                 <option value="Full Time">Full Time</option>
                 <option value="Part Time">Part Time</option>
             </select>
-            <button class="searchbar2" id="search_icon" ><i class="fa fa-fw fa-search"></i></button>
+            <button type="submit"    name="submit"><i class="fa fa-fw fa-search"></i></button>
+     
         </div>
         <input type="hidden" name="ctg" value="<?php echo $ctg?>">
 
@@ -228,7 +229,7 @@ $result = mysqli_query($conn, $sql);
         <?php
             } else {
                 // echo '<script> alert("Data not found.");</script>';
-                $note = "Data not found.";
+                echo '<script> alert("Data not found");</script>';
                 ?>
 
         <div class="note" style="width:100%; text-align: center; ">

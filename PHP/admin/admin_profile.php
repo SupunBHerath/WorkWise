@@ -1,6 +1,13 @@
-<?php include("../conn.php");
-session_start();
+<?php session_start(); ?>
+<?php
+if (!isset($_SESSION['id']) || $_SESSION['role'] != 'admin') {
+    header('Location: ../login.php');
+    exit();
+}
 ?>
+<?php require_once('../conn.php') ?>
+
+
 <?php $active6 = "active"; ?>
 <?php
 $fName = $_SESSION['fName'];

@@ -1,4 +1,11 @@
-<?php include("../conn.php"); ?>
+<?php session_start(); ?>
+<?php
+if (!isset($_SESSION['id']) || $_SESSION['role'] != 'admin') {
+    header('Location: ../login.php');
+    exit();
+}
+?>
+<?php require_once('../conn.php') ?>
 
 
 <!DOCTYPE html>

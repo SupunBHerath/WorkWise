@@ -12,18 +12,16 @@
 </head>
 
 <body>
+    <?php include_once('header.php') ?>
     <?php include_once('navbar.php') ?>
-
-
 
 
     <div class="div_flex">
         <div class="flex_left">
-            <h1 id="text1">Find the right <span id="freel">freelance </span> service, right away</h1>
-            <div class="search_div">
-                <!-- <input type="text" class="search_bar" placeholder="Search...">
-                <button class="search_btn">Search</button> -->
-            </div>
+              <h2>Find the best freelancers  right away</h2>
+            <h3>The #1 Site for Remote Jobs</h3><br>
+           <a href="find_job.php"> <button id="" name=""><span>Find Job</span></button></a>
+            
         </div>
         <div class="flex_right"></div>
     </div>
@@ -45,52 +43,51 @@
 
             ?>
                     <div class="job1">
-                        <a href="job_category.php?ctg=<?php echo $row['category']?>">
+                        <a href="job_category.php?ctg=<?php echo $row['category'] ?>">
                             <div class="job_img">
-                                <img src="../Image/FT/<?php echo $row['category']?>.png" alt="Image Updating ">
+                                <img src="../Image/FT/<?php echo $row['category'] ?>.png" alt="Image Updating ">
                             </div>
-                            <?php 
-                            $ctg=$row['category'];
-                            if($ctg=="Graphics"){
-                                $c1='Graphics & Design';
-                            }elseif($ctg=="Programming"){
-                                $c1='Programming & Tech';
-                            }elseif($ctg=="Digital"){
-                                $c1='Digital Marketing';
-                            }elseif($ctg=="Video"){
-                                $c1='Video & Animation';
-                            }elseif($ctg=="Writing"){
-                                $c1='Writing & Translation';
-                            }elseif($ctg=="Music"){
-                                $c1='Music & Audio';
-                            }elseif($ctg=="Business"){
-                                $c1='Business';
-                            }elseif($ctg=="AI"){
-                                $c1='AI Services';
-                            }else{
-                                $c1='New Job category';
+                            <?php
+                            $ctg = $row['category'];
+                            if ($ctg == "Graphics") {
+                                $c1 = 'Graphics & Design';
+                            } elseif ($ctg == "Programming") {
+                                $c1 = 'Programming & Tech';
+                            } elseif ($ctg == "Digital") {
+                                $c1 = 'Digital Marketing';
+                            } elseif ($ctg == "Video") {
+                                $c1 = 'Video & Animation';
+                            } elseif ($ctg == "Writing") {
+                                $c1 = 'Writing & Translation';
+                            } elseif ($ctg == "Music") {
+                                $c1 = 'Music & Audio';
+                            } elseif ($ctg == "Business") {
+                                $c1 = 'Business';
+                            } elseif ($ctg == "AI") {
+                                $c1 = 'AI Services';
+                            } else {
+                                $c1 = 'New Job category';
                             }
                             ?>
-                            <a href="job_category.php?ctg=<?php echo $row['category']?>"><?php echo $c1;?></a>
+                            <a href="job_category.php?ctg=<?php echo $row['category'] ?>"><?php echo $c1; ?></a>
                             <br>
                         </a>
                     </div>
 
-            <?php      }
+                <?php      }
             } else {
-                $count=0;
-                while ($count<5){?>
+                $count = 0;
+                while ($count < 5) { ?>
                     <div class="job1">
-                    <a href="#">
-                        <div class="job_img">
-                            <img src="../Image/FT/<?php echo 'coming'?>" alt=".<?php echo 'coming soon'?>">
-                        </div>
-                        <a href="#"><?php echo 'coming soon';?>/a>
-                        <br>
-                    </a>
-                </div>
-             <?php   }
-              
+                        <a href="#">
+                            <div class="job_img">
+                                <img src="../Image/FT/<?php echo 'coming' ?>" alt=".<?php echo 'coming soon' ?>">
+                            </div>
+                            <a href="#"><?php echo 'coming soon'; ?>/a>
+                                <br>
+                            </a>
+                    </div>
+            <?php   }
             } ?>
 
         </div>

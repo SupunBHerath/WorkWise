@@ -103,16 +103,16 @@ if (!isset($_SESSION['id'])) {
     <div class="footer-column">
         <h4>JOb Category</h4>
         <ul>
-            <li> <a href="find_job.php">All </a></li>
-            <li> <a href="job_category.php?ctg=Graphics">Graphics & Design </a></li>
-            <li> <a href="job_category.php?ctg=Programming">Programming & Tech</a></li>
-            <li> <a href="job_category.php?ctg=Digital">Digital Marketing </a></li>
-            <li> <a href="job_category.php?ctg=Video">Video & Animation </a></li>
-            <li> <a href="job_category.php?ctg=Writing">Writing & Translation </a></li>
-            <li> <a href="job_category.php?ctg=Music">Music & Audio </a></li>
-            <li> <a href="job_category.php?ctg=Business">Business </a></li>
-            <li> <a href="job_category.php?ctg=AI">AI Services </a></li>
-            <li> <a href="job_category.php?ctg=New">New* </a></li>
+            <li> <a href="user_job.php">All </a></li>
+            <li> <a href="login_job_category.php?ctg=Graphics">Graphics & Design </a></li>
+            <li> <a href="login_job_category.php?ctg=Programming">Programming & Tech</a></li>
+            <li> <a href="login_job_category.php?ctg=Digital">Digital Marketing </a></li>
+            <li> <a href="login_job_category.php?ctg=Video">Video & Animation </a></li>
+            <li> <a href="login_job_category.php?ctg=Writing">Writing & Translation </a></li>
+            <li> <a href="login_job_category.php?ctg=Music">Music & Audio </a></li>
+            <li> <a href="login_job_category.php?ctg=Business">Business </a></li>
+            <li> <a href="login_job_category.php?ctg=AI">AI Services </a></li>
+            <li> <a href="login_job_category.php?ctg=New">New* </a></li>
 
         </ul>
     </div>
@@ -143,9 +143,9 @@ if (!isset($_SESSION['id'])) {
     <div class="footer-column">
         <h4>My Account</h4>
         <ul>
-            <li><a href="#">My account</a></li>
-            <li><a href="#">Find Talenter </a></li>
-            <li><a href="#">Find Freelance </a></li>
+            <li><a href="profile.php">My account</a></li>
+            <li><a href="user.php">Find Talenter </a></li>
+            <li><a href="find_freelancers.php">Find Freelance </a></li>
 
         </ul>
     </div>

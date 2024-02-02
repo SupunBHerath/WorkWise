@@ -11,12 +11,13 @@
 </head>
 
 <body>
-<header>
+<!-- <header>
         <link rel="stylesheet" href="../CSS/header.css">
         <div class="headerbar">
             <h3>The #1 Site for Remote Jobs</h3>
         </div>
-    </header>
+    </header> -->
+    <?php include_once('header.php') ?>
 
     <?php include_once("navbar.php"); ?>
 

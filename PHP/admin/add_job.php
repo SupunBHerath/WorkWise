@@ -1,8 +1,16 @@
-<?php include("../conn.php"); ?>
 <?php session_start(); ?>
+<?php
+if (!isset($_SESSION['id']) || $_SESSION['role'] != 'admin') {
+    header('Location: ../login.php');
+    exit();
+}
+?>
+<?php require_once('../conn.php') ?>
+
+
 <?php if (isset($_POST['submit'])) {
     if ($_POST['submit'] == 'Add Job') {
-        $userid=$_SESSION['id'];
+        $userid = $_SESSION['id'];
 
         $title = $_POST['job_title'];
         $jobType = $_POST['job_type'];
@@ -12,14 +20,14 @@
         $exitDay = $_POST['exit_day'];
         $responsibilities = $_POST['responsibilities'];
         $requirement = $_POST['requirements'];
-        $ctg=$_POST['ctg'];
-        
+        $ctg = $_POST['ctg'];
+
         $sql = "INSERT INTO unapproved_job (userid,category,title, job_type, company, location, price, exit_day,responsibilities,requirement,payment) VALUES ('$userid','$ctg','$title', '$jobType', '$company', '$location', '$price', '$exitDay','$responsibilities','$requirement','$payment')";
         $result = mysqli_query($conn, $sql);
         if ($result) {
-             echo $userid;
-            // echo '<script> alert("Job added successfully");window.location.href="admin_dashbord.php"; </script>';
-            
+           
+            echo '<script> alert("Job added successfully");window.location.href="admin_dashbord.php"; </script>';
+
 
         } else {
             echo '<script> alert("Job not added.");window.location.href="admin_dashbord.php;</script>';
@@ -38,9 +46,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../../CSS/add_job.css">
 
-    <title>Admin Panel - Add Job</title>
+    <title>Admin Add Job</title>
     <style>
-
+        form {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            font-weight: 700;
+        }
     </style>
 </head>
 
@@ -51,17 +70,17 @@
         <h1>Add Your Job</h1>
 
         <label for="job_Category">Job Category:</label>
-            <select name="ctg" id="job_Category">
-                <option value="Graphics">Graphics & Design</option>
-                <option value="Programming">Programming & Tech</option>
-                <option value="Digital">Digital Marketing</option>
-                <option value="Video">Video & Animation</option>
-                <option value="Writing">Writing & Translation</option>
-                <option value="Music">Music & Audio</option>
-                <option value="Business">Business</option>
-                <option value="AI">AI Services</option>
-                <option value="New">New*</option>
-            </select>
+        <select name="ctg" id="job_Category">
+            <option value="Graphics">Graphics & Design</option>
+            <option value="Programming">Programming & Tech</option>
+            <option value="Digital">Digital Marketing</option>
+            <option value="Video">Video & Animation</option>
+            <option value="Writing">Writing & Translation</option>
+            <option value="Music">Music & Audio</option>
+            <option value="Business">Business</option>
+            <option value="AI">AI Services</option>
+            <option value="New">New*</option>
+        </select>
 
         <label for="job_title">Job Title:</label>
         <input type="text" name="job_title" required><br>

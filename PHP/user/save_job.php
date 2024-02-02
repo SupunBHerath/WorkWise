@@ -88,18 +88,14 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/save_job.css">
+    <link rel="stylesheet" href="../../CSS/job_list.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <link rel="stylesheet" href="../../CSS/header.css">
-        <div class="headerbar">
-            <h3>The #1 Site for Remote Jobs</h3>
-        </div>
-    </header>
+<?php include_once("login_header.php"); ?>
+
 
     <?php include_once("login_navbar.php"); ?>
     <form action="save_job.php" method="get">

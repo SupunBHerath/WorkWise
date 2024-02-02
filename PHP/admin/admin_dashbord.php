@@ -1,6 +1,11 @@
 <?php include("../conn.php"); ?>
 <?php session_start(); ?>
 <?php
+if (!isset($_SESSION['id'])) {
+    header('Location: ../login.php');
+    exit();
+} ?>
+<?php
 $sql_user = "SELECT count(*) as user_count FROM users ";
 $result_user = mysqli_query($conn, $sql_user);
 $row_user = mysqli_fetch_assoc($result_user);

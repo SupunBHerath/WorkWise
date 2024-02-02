@@ -21,7 +21,7 @@ if (!isset($_SESSION['id'])) {
 <body>
 
     <div class="navbar" id="navbarid1">
-        <a href="user.php">All</a>
+        
         <a href="login_job_category.php?ctg=Graphics">Graphics & Design</a>
         <a href="login_job_category.php?ctg=Programming">Programming & Tech</a>
         <a href="login_job_category.php?ctg=Digital">Digital Marketing</a>

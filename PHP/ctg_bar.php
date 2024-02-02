@@ -14,7 +14,7 @@
 <body>
 
     <div class="navbar" id="navbarid1">
-        <a href="find_job.php">All                                   </a>
+        <!-- <a href="find_job.php">All                                   </a> -->
         <a href="job_category.php?ctg=Graphics">Graphics & Design    </a>
         <a href="job_category.php?ctg=Programming">Programming & Tech</a>
         <a href="job_category.php?ctg=Digital">Digital Marketing     </a>

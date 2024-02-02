@@ -53,35 +53,36 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/user.css">
+    <link rel="stylesheet" href="../CSS/job_list.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <link rel="stylesheet" href="../CSS/header.css">
         <div class="headerbar">
             <h3>The #1 Site for Remote Jobs</h3>
         </div>
-    </header>
+    </header> -->
+    <?php include_once('header.php') ?>
 
     <?php include_once("navbar.php"); ?>
     <?php include_once("ctg_bar.php"); ?>
     <form action="find_job.php" method="get">
-        <div class="searchbar">
-            <input type="search" name="search" placeholder="<?php if (isset($_GET["search"])) {
+    <div class="searchbar">
+            <input id="fsearch" type="search" name="search" placeholder="<?php if (isset($_GET["search"])) {
                                                                 echo $_GET["search"];
                                                             } else {
-                                                                echo "Search";
+                                                                echo "Search jobs...";
                                                             } ?>">
 
-            <select name="filter" id="">
+            <select name="filter"  id="idcheck " >
                 <option value="All Type">Job Type</option>
                 <option value="Full Time">Full Time</option>
                 <option value="Part Time">Part Time</option>
             </select>
-            <button><i class="fa fa-fw fa-search"></i></button>
+            <button type="submit"name="submit"><i class="fa fa-fw fa-search"></i></button>
         </div>
     </form>
     <h3 id="phpmg">

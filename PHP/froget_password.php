@@ -4,10 +4,10 @@
 <?php 
 if(isset($_POST['change'])){
     $email = $_POST['email'];
-    $password1 = $_POST['password1'];
+    $password1 = $_POST['password'];
     $password2 = $_POST['cpassword'];
     
-    if ($password1 == $password2) {
+    if ($password1 ==$password2) {
         $hashpassword = password_hash($password1, PASSWORD_DEFAULT);
         
         $sql = "UPDATE `users` SET `password` = ? WHERE `email` = ?";
@@ -19,7 +19,8 @@ if(isset($_POST['change'])){
     
         echo '<script> alert("Password Changed Successfully");window.location.href="login.php";</script>';
     } else {
-        echo '<script> alert("Passwords do not match");window.location.href="forget_password.php";</script>';
+        echo '<script> alert("Passwords do not match");window.location.href="froget_password.php";</script>';
+        
     }
 }
 
@@ -113,7 +114,7 @@ if (isset($_POST['submit'])) {
             </div>
 
         </form>
-        <h5 style="color: red;"> -- Don't you have WorkWise account?<a href="sigup.php" style="border: 0; font-size: small; text-decoration: underline;">Sign Up</a>
+        <h5 style="color: red;"> -- Don't you have WorkWise account?<a href="signup.php" style="border: 0; font-size: small; text-decoration: underline;">Sign Up</a>
         </h5>
     </div>
 
@@ -144,7 +145,7 @@ if (isset($_POST['submit'])) {
             </div>
 
         </form>
-        <h5 style="color: red;"> -- Don't you have WorkWise account?<a href="sigup.php" style="border: 0; font-size: small; text-decoration: underline;">Sign Up</a>
+        <h5 style="color: red;"> -- Don't you have WorkWise account?<a href="signup.php" style="border: 0; font-size: small; text-decoration: underline;">Sign Up</a>
         </h5>
     </div>
 

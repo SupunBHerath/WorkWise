@@ -58,7 +58,7 @@ if (!isset($_SESSION['id'])) {
             <h1>Add Your Job</h1>
 
             <label for="job_Category">Job Category:</label>
-            <select name="ctg" id="job_Category">
+            <select name="ctg" id="job_Category" required>
                 <option value="Graphics">Graphics & Design</option>
                 <option value="Programming">Programming & Tech</option>
                 <option value="Digital">Digital Marketing</option>
@@ -71,32 +71,32 @@ if (!isset($_SESSION['id'])) {
             </select>
 
             <label for="job_title">Job Title:</label>
-            <input type="text" name="job_title"><br>
+            <input type="text" name="job_title" required><br>
 
             <label for="company">Company:</label>
-            <input type="text" name="company"><br>
+            <input type="text" name="company" required><br>
 
             <label for="location">Location:</label>
-            <input type="text" name="location"><br>
+            <input type="text" name="location" required><br>
 
 
             <label for="price">Price:</label>
-            <input type="number" name="price"><br>
+            <input type="number" name="price" required><br>
 
-            <label for="job_type">Job Type:</label>
-            <select name="job_type" id="job_type">
+            <label for="job_type" >Job Type:</label>
+            <select name="job_type" id="job_type" required>
                 <option value="Full Time">Full Time</option>
                 <option value="Part Time">Part Time</option>
             </select>
             <br><br>
             <label for="responsibilities">Responsibilities:</label>
-            <textarea name="responsibilities" rows="4"></textarea><br>
+            <textarea name="responsibilities" rows="4" required></textarea><br>
 
             <label for="requirements">Requirements:</label>
-            <textarea name="requirements" rows="4"></textarea><br>
+            <textarea name="requirements" rows="4" required></textarea><br>
 
             <label for="exit_day">Exit Day:</label>
-            <input type="date" name="exit_day"><br>
+            <input type="date" name="exit_day" required><br>
 
             <br>
             <a href="user.php"><input id="cancel" type="button" value="Back"></a>
@@ -114,13 +114,13 @@ if (!isset($_SESSION['id'])) {
             </select>
 
             <label for="card-number">Card Number:</label>
-            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required pattern=".{12}">
 
             <label for="expiry-date">Expiry Date:</label>
-            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required pattern=".{5}">
 
             <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" placeholder="123" required>
+            <input type="number" id="cvv" name="cvv" placeholder="123" required  min="1" max="999">
 
             <label for="card-holder">Cardholder Name:</label>
             <input type="text" id="card-holder" name="card-holder" placeholder="John Doe" required>

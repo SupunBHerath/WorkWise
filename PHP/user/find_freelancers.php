@@ -12,7 +12,7 @@ if (!isset($_SESSION['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../CSS/find_freelancers.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Find Freelancers</title>
 </head>
@@ -20,7 +20,7 @@ if (!isset($_SESSION['id'])) {
 <body>
     <div class="container">
 
-        <a id="backlink" href="home.php"><i class="glyphicon glyphicon-menu-left"></i></a>
+        <a id="backlink" href="home.php"><i class="	fa fa-angle-double-left"c></i></a>
         <h1 id="find">Find Freelancers</h1>
         <p>Welcome to our "<strong>Find Freelancers</strong>" section, a space dedicated to showcasing your creative
             projects and talents! Whether you're an artist, designer, photographer, or a creator in any other field, we
@@ -29,7 +29,7 @@ if (!isset($_SESSION['id'])) {
         <ol>
             <li><strong>Fill in the Details:</strong> Provide a title, a brief description of your work, and specify the
                 category it falls under.</li>
-                <br>
+                
             <li><strong>Payment :</strong>
                 <ul>
                     <li>One Week &emsp;&emsp;: $10</li>
@@ -38,7 +38,7 @@ if (!isset($_SESSION['id'])) {
                     <li>Month&emsp;&emsp;&emsp;&emsp; : $35</li>
                 </ul>
             </li>
-            <br>
+            
             <li><strong>Submit Your Work:</strong> Hit the submit button, and your work will be shared with our
                 community.</li>
         </ol>

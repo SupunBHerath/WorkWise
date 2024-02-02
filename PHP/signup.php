@@ -24,10 +24,13 @@ if (isset($_POST["submit"])) {
         } else {
             if ($password == $cpassword) {
                 $hashpassword = password_hash("$password", PASSWORD_DEFAULT);
+                $hashanswer=password_hash($answer, PASSWORD_DEFAULT);
                 $sql = "INSERT INTO `users` ( `fName`, `lName`, `email`, `password`, `question`, `answer`) VALUES (?,?,?,?,?,?);";
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param("ssssss", $fName, $lName, $email, $hashpassword, $qusation, $answer);
+                $stmt->bind_param("ssssss", $fName, $lName, $email, $hashpassword, $qusation, $hashanswer);
                 $stmt->execute();
+            echo '<script> alert("Register successfully");window.location.href="login.php"; </script>';
+
                 header("location:login.php");
                 $stmt->close();
                 

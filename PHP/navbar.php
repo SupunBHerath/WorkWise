@@ -6,8 +6,8 @@
     <a class="<?php echo $active1?>" class="active" href="index.php"><i class="fa fa-fw fa-home"></i> Home</a>
     <a class="<?php echo $active2?>" href="find_job.php"><i class="fa fa-fw fa-search"></i> Search Job</a>
     <a class="<?php echo $active3?>"  href="find_freelancer.Notlogin.php"><i class="fa fa-group"></i> Find Freelancers</a>
-    <a class="<?php echo $active4?>"  href="about.php"><i class="fa "></i> About Us</a>
-    <a class="<?php echo $active5?>"  href="#"><i class="fa "></i> Contact us</a>
+    <a class="<?php echo $active4?>"  href="about.php"><i class="fa fa-info-circle"></i> About Us</a>
+    <a class="<?php echo $active5?>"  href="cb.php"><i class="	fa fa-envelope"></i> Contact us</a>
 
     <a class="<?php echo $active6?>" href="login.php" id="login"><i class="fa fa-fw fa-user "></i> Login</a>
 

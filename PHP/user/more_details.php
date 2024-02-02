@@ -120,12 +120,7 @@ if (isset($_GET["apply"])) {
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td class="subtitle">Exit Day:</td>
-                                <td><span style="color: rgba(255, 0, 0, 0.601);">
-                                        <?php echo $row['exitDay']; ?>
-                                    </span></td>
-                            </tr>
+                           
                         </table>
                         <br>
                         <p>Responsibilities:</p>

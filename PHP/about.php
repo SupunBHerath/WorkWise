@@ -57,13 +57,8 @@
 </head>
 
 <body>
-    <header>
-        <link rel="stylesheet" href="../CSS/header.css">
-        <div class="headerbar">
-            <h3>The #1 Site for Remote Jobs</h3>
+<?php include_once('header.php') ?>
 
-        </div>
-    </header>
     <?php include_once("navbar.php")?>
     <div class="disc">
         <h2>Why Choose WorkWise?</h2>

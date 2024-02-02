@@ -1,3 +1,5 @@
+
+
 <style>
     /* -- Footer -- */
 
@@ -97,15 +99,15 @@
         <h4>JOb Category</h4>
         <ul>
             <li> <a href="find_job.php">All </a></li>
-            <li> <a href="job_category.php?ctg=Graphics">Graphics & Design </a></li>
-            <li> <a href="job_category.php?ctg=Programming">Programming & Tech</a></li>
-            <li> <a href="job_category.php?ctg=Digital">Digital Marketing </a></li>
-            <li> <a href="job_category.php?ctg=Video">Video & Animation </a></li>
-            <li> <a href="job_category.php?ctg=Writing">Writing & Translation </a></li>
-            <li> <a href="job_category.php?ctg=Music">Music & Audio </a></li>
-            <li> <a href="job_category.php?ctg=Business">Business </a></li>
-            <li> <a href="job_category.php?ctg=AI">AI Services </a></li>
-            <li> <a href="job_category.php?ctg=New">New* </a></li>
+            <li> <a href="admin_job_category.php?ctg=Graphics">Graphics & Design </a></li>
+            <li> <a href="admin_job_category.php?ctg=Programming">Programming & Tech</a></li>
+            <li> <a href="admin_job_category.php?ctg=Digital">Digital Marketing </a></li>
+            <li> <a href="admin_job_category.php?ctg=Video">Video & Animation </a></li>
+            <li> <a href="admin_job_category.php?ctg=Writing">Writing & Translation </a></li>
+            <li> <a href="admin_job_category.php?ctg=Music">Music & Audio </a></li>
+            <li> <a href="admin_job_category.php?ctg=Business">Business </a></li>
+            <li> <a href="admin_job_category.php?ctg=AI">AI Services </a></li>
+            <li> <a href="admin_job_category.php?ctg=New">New* </a></li>
 
         </ul>
     </div>

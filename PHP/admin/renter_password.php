@@ -1,6 +1,15 @@
+<?php session_start(); ?>
 <?php
-session_start(); 
-include("../conn.php");
+if (!isset($_SESSION['id']) || $_SESSION['role'] != 'admin') {
+    header('Location: ../login.php');
+    exit();
+}
+?>
+<?php require_once('../conn.php') ?>
+
+
+<?php
+
     if(isset($_GET['delete'])){
         $delete=true;
         $id = $_GET['id'];

@@ -48,7 +48,7 @@
     float: inline-end;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .navbar a:not(:first-child) {
         display: none;
     }
@@ -62,7 +62,7 @@
 }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .navbar.responsive {
         position: relative;
     }

@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php 
+<?php
 if (!isset($_SESSION['id'])) {
     header('Location: ../login.php');
     exit();
@@ -26,10 +26,7 @@ if (isset($_GET["search"]) || isset($_GET["filter"])) {
             $sql = "SELECT * FROM jobtable WHERE (title LIKE '%$search%' OR company LIKE '%$search%' OR location LIKE '%$search%' OR price LIKE '%$search%' OR exitDay LIKE '%$search%') AND jobType = '$filter'";
             $result = mysqli_query($conn, $sql);
             if ($result == false) {
-
-
             }
-
         } else {
             // echo '<script> alert("Data not found.");</script>';
 
@@ -43,12 +40,9 @@ if (isset($_GET["search"]) || isset($_GET["filter"])) {
                 // echo '<script> alert("Data not found.");</script>';
                 $note = "Data not found.";
             }
-
         } else {
             $sql = "SELECT * FROM jobtable ";
-
         }
-
     }
 } else {
     $sql = "SELECT * FROM jobtable ";
@@ -64,26 +58,17 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/user.css">
+    <link rel="stylesheet" href="../../CSS/job_list.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
     <style>
 
-    .job_listings {
-  margin-left: 50px;
-  margin-right: 50px;
-   
-}
+
     </style>
 </head>
 
 <body>
-    <!-- <header>
-        <link rel="stylesheet" href="../../CSS/header.css">
-        <div class="headerbar">
-            <h3>The #1 Site for Remote Jobs</h3>
-        </div>
-    </header> -->
+
 
     <?php include_once("login_header.php"); ?>
 
@@ -93,18 +78,18 @@ $result = mysqli_query($conn, $sql);
 
     <form action="user.php" method="get">
         <div class="searchbar">
-            <input type="search" name="search" placeholder="<?php if (isset($_GET["search"])) {
-                echo $_GET["search"];
-            } else {
-                echo "Search";
-            } ?>">
+            <input id="fsearch" type="search" name="search" placeholder="<?php if (isset($_GET["search"])) {
+                                                                                echo $_GET["search"];
+                                                                            } else {
+                                                                                echo "Search jobs...";
+                                                                            } ?>">
 
-            <select name="filter" id="">
+            <select name="filter" id="idcheck ">
                 <option value="All Type">Job Type</option>
                 <option value="Full Time">Full Time</option>
                 <option value="Part Time">Part Time</option>
             </select>
-            <button><i class="fa fa-fw fa-search"></i></button>
+            <button type="submit" name="submit"><i class="fa fa-fw fa-search"></i></button>
         </div>
     </form>
     <h3 id="phpmg">
@@ -121,7 +106,7 @@ $result = mysqli_query($conn, $sql);
             if ($result && mysqli_num_rows($result) > 0) {
                 $newID = 1;
                 while ($row = mysqli_fetch_assoc($result)) {
-                    ?>
+            ?>
 
                     <div class="job">
                         <h2>
@@ -144,10 +129,7 @@ $result = mysqli_query($conn, $sql);
                             <p>$
                                 <?php echo $row['price']; ?> per monthly
                             </p>
-                            <h4>Exit Day:</h4>
-                            <p><span style="color: rgba(255, 0, 0, 0.601);">
-                                    <?php echo $row['exitDay']; ?>
-                                </span></p>
+                           
                         </div>
                         <center>
                             <form action="more_details.php" method="get">
@@ -159,29 +141,31 @@ $result = mysqli_query($conn, $sql);
                         </center>
                     </div>
 
-                    <?php
+                <?php
                     $newID++;
                 }
                 ?>
-            </div>
         </div>
-        <?php
+    </div>
+<?php
             } else {
                 // echo '<script> alert("Data not found.");</script>';
                 $note = "Data not found.";
-                ?>
+?>
 
-        <div class="note" style="width:100%; text-align: center; ">
-            <h1 style="color: red">
-                <?php
+    <div class="note" style="width:100%; text-align: center; ">
+        <h1 style="color: red">
+            <?php
                 echo $note;
-                ?>
-            </h1>
-        </div>
-
-
-
-        <?php
-            }
             ?>
-<?php include_once('login_footer.php')?>
+        </h1>
+    </div>
+
+
+
+<?php
+            }
+?>
+<?php if ($note != 'Data not found.') {
+    include_once('login_footer.php');
+}

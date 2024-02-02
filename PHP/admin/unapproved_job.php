@@ -1,6 +1,13 @@
-<?php include("../conn.php");
-session_start();
+<?php session_start(); ?>
+<?php
+if (!isset($_SESSION['id']) || $_SESSION['role'] != 'admin') {
+    header('Location: ../login.php');
+    exit();
+}
 ?>
+<?php require_once('../conn.php') ?>
+
+
 <?php $active4 = "active"; ?>
 <?php
 if (isset($_GET['remove']) || isset(  $_GET['add'])) {
@@ -87,7 +94,9 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/approved_job.css">
+    <!-- <link rel="stylesheet" href="../../CSS/approved_job.css"> -->
+    <link rel="stylesheet" href="../../CSS/job_list.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>
 </head>

@@ -94,6 +94,8 @@
 .pimge {
     width: 40px;
     height: 40px;
+    border-style: 2px solid ;
+    border-color: #04AA6D;
     border-radius: 100%;
     background-repeat: no-repeat;
     background-position: center;

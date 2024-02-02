@@ -141,7 +141,7 @@ if (!isset($_SESSION['id'])) {
 
                     <div class="input-group">
                         <label for="email">Password</label>
-                        <input type="password" id="password" name="password" pattern=".{8,}" title="Password must be at least 8 characters" required placeholder="Enter Password (at least 10 characters)">
+                        <input type="password" id="password" name="password" pattern=".{8,}" title="Password must be at least 8 characters"  placeholder="Enter Password (at least 10 characters)">
 
                     </div>
 

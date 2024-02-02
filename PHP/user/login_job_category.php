@@ -74,7 +74,7 @@ $result = mysqli_query($conn, $sql);
     <title>Document</title>
 <style>
 #seardiv{
-   background-image: url(../../Image/Home/ctg2.jpg);
+   background-image: url(../../Image/Home/ctg4.png);
    background-position: center;
    background-size: cover;
    background-repeat: none;
@@ -220,10 +220,7 @@ $result = mysqli_query($conn, $sql);
                             <p>$
                                 <?php echo $row['price']; ?> per monthly
                             </p>
-                            <h4>Exit Day:</h4>
-                            <p><span style="color: rgba(255, 0, 0, 0.601);">
-                                    <?php echo $row['exitDay']; ?>
-                                </span></p>
+                           
                         </div>
                         <center>
                             <form action="more_details.php" method="get">

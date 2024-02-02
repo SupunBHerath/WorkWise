@@ -88,7 +88,7 @@ mysqli_close($conn);
         <form class="loginform" action="user_renter_password.php" method="POST">
             <div class="form-group">
                 <label for="password" style="text-align: left;">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
                 <input type="hidden" name="delete" value="<?php echo $delete;?>">
 

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 
@@ -14,7 +16,7 @@
 <body>
 
     <div class="navbar" id="navbarid1">
-        <a href="user.php">All</a>
+        <a href="approved_job.php">All</a>
         <a href="admin_job_category.php?ctg=Graphics">Graphics & Design</a>
         <a href="admin_job_category.php?ctg=Programming">Programming & Tech</a>
         <a href="admin_job_category.php?ctg=Digital">Digital Marketing</a>
