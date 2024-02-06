@@ -143,9 +143,9 @@
         <div class="footer-column">
             <h4>My Account</h4>
             <ul>
-                <li><a href="#">My account</a></li>
-                <li><a href="#">Find Talenter </a></li>
-                <li><a href="#">Find Freelance </a></li>
+                <li><a href="login.php">My account</a></li>
+                <li><a href="find_job.php">Search job </a></li>
+                <li><a href="find_freelancer.Notlogin.php">Find Freelance </a></li>
 
             </ul>
         </div>

@@ -91,7 +91,7 @@ if (isset($_POST["submit"])) {
                 <button type="submit" id="S1" name="submit">Sign Up</button>
             </center>
 
-            <h5 style="color: red;"> -- Already have WorkWise an account ? <a href="../HTML/Login.html"
+            <h5 style="color: red;"> -- Already have WorkWise an account ? <a href="login.php"
                     style="border: 0; ">Login</a>
 
         </div>

@@ -33,7 +33,6 @@
     <div class="jobctg_div">
         <div class="job_row">
             <?php
-            // $sql = "SELECT * FROM jobtable WHERE category IN (SELECT DISTINCT category FROM jobtable ORDER BY category LIMIT 5)";
             $sql = "SELECT category, count(category) AS category_count FROM jobtable GROUP BY category ORDER BY category_count DESC LIMIT 5";
 
             $result = $conn->query($sql);

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2024 at 07:13 AM
+-- Generation Time: Feb 02, 2024 at 01:37 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -39,10 +39,7 @@ CREATE TABLE `apply_job` (
 
 INSERT INTO `apply_job` (`id`, `userid`, `jobid`) VALUES
 (1, 7, 0),
-(2, 7, 1),
-(3, 7, 3),
-(4, 8, 1),
-(5, 9, 9);
+(2, 7, 1);
 
 -- --------------------------------------------------------
 
@@ -61,11 +58,7 @@ CREATE TABLE `bmjob` (
 --
 
 INSERT INTO `bmjob` (`id`, `userId`, `jobId`) VALUES
-(8, 0, 0),
-(19, 5, 1),
-(26, 1, 1),
-(27, 1, 2),
-(30, 6, 3);
+(26, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -161,8 +154,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`userid`, `fName`, `lName`, `email`, `password`, `question`, `answer`, `favourite_field`, `role`, `image`) VALUES
 (1, 'Supun', 'Bandara', 'supunbherath@gmail.com', '$2y$10$LzzjwmmyZMhv0TizTPN8me4ClZrnqMX01qRFFrBurYJbac9eUkY4G', 'What is your favourite color', '$2y$10$BaxzMdUNaGS.XO9e1nZAsOTTh6c1Kyghu9cjlUKbgHwl/QJUSEHUW', '', 'admin', 'user.jpg'),
-(6, 'Iresha', 'Udayangani', 'i@gmail.com', '$2y$10$TTUkSH1P./E87TdHBJw98eRrvtAPUY3wi94bqEyYudRrMpdH84sVK', 'What is your favourite color', '$2y$10$BaxzMdUNaGS.XO9e1nZAsOTTh6c1Kyghu9cjlUKbgHwl/QJUSEHUW', '', 'user', 'user.jpg'),
-(9, 'sithila', 'krishan', 'sithilakrishan99@gmail.com', '$2y$10$msCYkqQy6tyNWOIF4wpO6.oqG5xRsh/I9ugGNIIB29IlLJl0aUAe.', 'What is your favourite color', 'green', '', 'user', '4.gif');
+(12, 'Shan', 'Kumara', 'Sha@gmail.com', '$2y$10$SwS7/ndhGmBRux3ogn6TEOn8Mn8pQHZlKzplU2gkNHbQe2nZsoaEa', 'What is your favourite color', '$2y$10$I2yvPWQu8pFovsmrS7XlpOJebmmOzeeVwGwOTMTUmDnAq2m63Imm2', '', 'user', 'user.jpg'),
+(13, 'I', 'Udayangani', 'i@gmail.com', '$2y$10$TEZKz1n9ZaQ37juSpYSAquaB.tOQzBUY3mfGC1n9esE8.yVpJy6IK', 'What is your favourite color', '$2y$10$qJEEjJ41MDiOStKsQXTsxeWJfjsV9Y5oinAM4ZjPWD0n/iqCY18O2', '', 'user', 'user.jpg');
 
 --
 -- Indexes for dumped tables
@@ -206,31 +199,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `apply_job`
 --
 ALTER TABLE `apply_job`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `bmjob`
 --
 ALTER TABLE `bmjob`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `jobtable`
 --
 ALTER TABLE `jobtable`
-  MODIFY `jobId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `jobId` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `unapproved_job`
 --
 ALTER TABLE `unapproved_job`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

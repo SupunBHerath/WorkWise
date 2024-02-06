@@ -7,7 +7,7 @@ if(isset($_POST['change'])){
     $password1 = $_POST['password'];
     $password2 = $_POST['cpassword'];
     
-    if ($password1 ==$password2) {
+    if ($password1 == $password2) {
         $hashpassword = password_hash($password1, PASSWORD_DEFAULT);
         
         $sql = "UPDATE `users` SET `password` = ? WHERE `email` = ?";
@@ -97,7 +97,7 @@ if (isset($_POST['submit'])) {
                 <input type="email" id="email" name="email" placeholder="Enter your Email" required>
             </div>
             <div class="form-group">
-                <label for="password" style="text-align: left;">Select your questions and password</label>
+                <label for="password" style="text-align: left;">Select your questions and Enter your answer</label>
                 <select name="qusation" required>
                     <option value="What is your favourite color">What is your favourite color</option>
                     <option value="What is your favourite color">What is your favourite color</option>
@@ -150,7 +150,7 @@ if (isset($_POST['submit'])) {
     </div>
 
 
-    <script>
+    <!-- <script>
         // document.getElementById('check_password').style.display = 'block';
 
         function showElement(showFormId, hideFormId) {
@@ -160,7 +160,7 @@ if (isset($_POST['submit'])) {
             showForm.style.display = 'block';
             hideForm.style.display = 'none';
         }
-    </script>
+    </script> -->
 
 </body>
 
