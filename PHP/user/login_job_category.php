@@ -67,6 +67,7 @@ $result = mysqli_query($conn, $sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../../CSS/save_job.css">
+    <link rel="stylesheet" href="../../CSS/job_list.css">
  
 
 
